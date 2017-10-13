@@ -21,7 +21,8 @@ app.get('/', (req,res) => {
   res.send('Hello world!')
 })
 
-const PORT = process.env.PORT || 3000;
+// set app to listen on PORT 3001
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
   console.log("Magic happening on port " + PORT);
 })
