@@ -16,13 +16,29 @@ connection.on('error', (err) => {
   console.log('Mongoose default connection error: ' + err);
 }); 
 
+
+// inject middleware
+
+app.use(express.static(__dirname + '/client/build/'));
 app.use(bodyParser.json());
 app.get('/', (req,res) => {
   res.send('Hello world!')
 })
+
+
+// Start adding routes
+
+// static files
+app.get('/', (req,res) => {
+	res.sendFile(__dirname + '/client/build/index.html')
+})
+
 
 // set app to listen on PORT 3001
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
   console.log("Magic happening on port " + PORT);
 })
+
+
+
