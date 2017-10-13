@@ -10,10 +10,9 @@ Full Stack App with the MERN Stack
 [User Stories](https://trello.com/b/QEZccMgv/project-3 "Trello")
 
 
-
 [GitHub](https://github.com/victoriactemple "Victoria Project Github Page")
 
-### Wireframe:
+
 [Wireframe](https://marvelapp.com/10c17afg "Wireframes")
 
 ### ERD: 
