@@ -1,6 +1,8 @@
 const mongoose = require('mongoose')
 
 // perhaps in the icebox we can have custom pies tied to users 
+// I could refactor so that the users can have an empty pies array nested in
+// 
 
 const pieSchema = mongoose.Schema({
     flavor: String,
