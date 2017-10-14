@@ -13,7 +13,7 @@ Full Stack App with the MERN Stack
 [Wireframe](https://marvelapp.com/10c17afg "Wireframes")
 
 ### ERD: 
-<img src="/images/project_three_erd.jpg">
+<img src="/images/project_three_erd_pie.jpg">
 
 
 #### Technologies Used:
