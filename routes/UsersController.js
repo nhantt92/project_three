@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const { UserModel } = require('../db/schema')
+const { User } = require('../db/schema')
 
 router.get('/', async (req, res) => {
     try {
@@ -38,6 +38,7 @@ router.get('/', async (req, res) => {
 //         res.send(err)
 //     }    
 // })
+
 
 
 

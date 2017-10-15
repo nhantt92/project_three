@@ -2,6 +2,7 @@ require("dotenv").config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+
 const UsersController = require('./routes/UsersController')
 // Create a new app using express
 const app = express();
@@ -22,9 +23,9 @@ connection.on('error', (err) => {
 
 
 // Inject Middleware
-
-app.use(express.static(`${__dirname}/client/build`))
 app.use(bodyParser.json());
+app.use(express.static(`${__dirname}/client/build`))
+
 
 
 // Adding Controllers after MiddleWare
