@@ -31,7 +31,9 @@ class UsersPage extends Component {
                 <h3>Select your name from the list below</h3>
                 {this.state.users.map(user => {
 
-                    return (<div><Link key={user._id} to={`${user._id}`}> {user.userName}</Link></div>)
+                    return (<div><Link 
+                    key={user._id} 
+                    to={`${user._id}`}> {user.userName}</Link></div>)
                 })}
             </div>
         );
