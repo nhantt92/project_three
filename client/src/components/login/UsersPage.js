@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 
-class LoginPage extends Component {
+class UsersPage extends Component {
     state= {
         users: []
     }
@@ -20,7 +20,7 @@ class LoginPage extends Component {
             const res = await axios.get('/api/users')
             this.setState({users: res.data})
         } catch(err) {
-            console.log(error)
+            console.log("error")
         }
     }
 
@@ -31,11 +31,11 @@ class LoginPage extends Component {
                 <h3>Select your name from the list below</h3>
                 {this.state.users.map(user => {
 
-                    return (<Link key={user._id}></Link>)
+                    return (<div><Link key={user._id} to={`${user._id}`}> {user.userName}</Link></div>)
                 })}
             </div>
         );
     }
 }
 
-export default LoginPage;
+export default UsersPage;

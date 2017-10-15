@@ -34,7 +34,7 @@ class HomePage extends Component {
                
                <ButtonContainter>
                <ButtonDecor>
-                <Link to="/login">create an account</Link>
+                <Link to="/signup">create an account</Link>
                 </ButtonDecor>
                 <ButtonDecor>
                 <Link to="/signin">sign in</Link>
