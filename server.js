@@ -2,10 +2,14 @@ require("dotenv").config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const UsersController = require('./routes/UsersController')
+// Create a new app using express
 const app = express();
+// Overwrite built in Promise library in mongoose
 mongoose.Promise = global.Promise;
 mongoose.connect(process.env.MONGODB_URI); //mongodb://localhost/idea-board
 
+// Connecting to Mongoose
 const connection = mongoose.connection;
 connection.on('connected', () => {
   console.log('Mongoose Connected Successfully');    
@@ -17,18 +21,16 @@ connection.on('error', (err) => {
 }); 
 
 
-// inject middleware
+// Inject Middleware
 
-app.use(express.static(__dirname + '/client/build/'));
+app.use(express.static(`${__dirname}/client/build`))
 app.use(bodyParser.json());
-app.get('/', (req,res) => {
-  res.send('Hello world!')
-})
 
 
-// Start adding routes
+// Adding Controllers after MiddleWare
+app.use('/api/users', UsersController)
 
-// static files
+// Index route that renders built React App
 app.get('/', (req,res) => {
 	res.sendFile(__dirname + '/client/build/index.html')
 })

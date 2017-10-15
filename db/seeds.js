@@ -3,13 +3,13 @@ const mongoose = require('mongoose')
 mongoose.connect(process.env.MONGODB_URI, {useMongoClient: true})
 mongoose.Promise = global.Promise
 
-const { User, Pie, Shop } = require('./schema')
 
+const { Shop, Pie, User } = require("./schema")
 
 
 // PIES
 
-const apple = new Pie({
+const apple = new Pie ({
     flavor: "apple",
     price: 10,
     description: "The all-American favorite! An apple pie, regional variation apple tart, is a fruit pie, in which the principal filling ingredient is apple. It is, on occasion, served with whipped cream or ice cream on top, or alongside cheddar cheese.",
@@ -23,14 +23,14 @@ const blueberry = new Pie ({
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCLu6OJVY9UegrYC548EK0x7cM1VeLrxNjb-ugHS20SHoJEigx"
 })
 
-const pumpkin = new Pie({
+const pumpkin = new Pie ({
     flavor: "pumpkin",
     price: 10,
     description: "Pumpkin pie is a sweet dessert pie with a spiced, pumpkin-based custard filling. The pumpkin is a symbol of harvest time, and pumpkin pie is often eaten during the fall and early winter.",
     image: "https://www.meals.com/imagesrecipes/18470lrg.jpg",
 })
 
-const bananaCream = new Pie({
+const bananaCream = new Pie ({
     flavor: "banana cream",
     price: 10,
     description: "A cream pie is a type of pie or cake filled with a rich custard or pudding that is made from milk, cream, flour, and eggs.",
@@ -42,35 +42,35 @@ const chess = new Pie ({
     description: "Chess pie is a dessert characteristic of Southern U.S. cuisine. Usually with delicate hints of lemon",
     image: "http://cdn-image.myrecipes.com/sites/default/files/sl_chesspie_1000.jpg"
 })
-const cherry = new Pie({
+const cherry = new Pie ({
     flavor: "cherry",
     price: 10,
     description: "Cherry pie is a pie baked with a cherry filling. Traditionally, cherry pie is made with tart rather than sweet cherries. Morello cherries are one of the most common kinds of cherry used, but other varieties such as the black cherry may also be used.",
     image: "http://images.media-allrecipes.com/userphotos/960x960/3758031.jpg",
 })
 
-const strawberry = new Pie({
+const strawberry = new Pie ({
     flavor: "strawberry",
     price: 10,
     description: "Strawberry pie is a dessert food consisting mainly of strawberries.",
     image: "https://i.ytimg.com/vi/FD1B6FOjySA/maxresdefault.jpg",
 })
 
-const rhubarb = new Pie({
+const rhubarb = new Pie ({
     flavor: "rhubarb",
     price: 10,
     description: "Rhubarb pie is a pie with a rhubarb filling. Popular in the UK, where rhubarb has been cultivated since the 1600s, its introduction to Europe from China is attributed to Marco Polo",
     image: "https://sallysbakingaddiction.com/wp-content/uploads/2016/05/strawberry-rhubarb-pie-9.jpg",
 })
 
-const pecan = new Pie({
+const pecan = new Pie ({
     flavor: "pecan",
     price: 10,
     description: "Pecan pie is a pie of pecan nuts mixed with a filling of eggs, butter, and sugar. Variations may include white or brown sugar, sugar syrup, molasses, maple syrup, or honey.",
     image: "https://images-gmi-pmc.edge-generalmills.com/4b6f4317-956e-411d-bc94-875a48246376.jpg",
 })
 
-const keyLime = new Pie({
+const keyLime = new Pie ({
     flavor: "key lime",
     price: 10,
     description: "Key lime pie is an American dessert made of Key lime juice, egg yolks, and sweetened condensed milk in a pie crust. The traditional Conch version uses the egg whites to make a meringue topping.",
@@ -81,7 +81,8 @@ const keyLime = new Pie({
 
 const pieShop = new Shop ({
     name: "cabinet",
-    yearEstablished: 2017
+    yearEstablished: 2017,
+    pies: [apple, blueberry, pumpkin, bananaCream, chess, cherry, strawberry, rhubarb, pecan, keyLime]
 })
 
 /// USERS 
@@ -130,6 +131,12 @@ const laurie = new User ({
 
 // Uses promises to make sure to remove it run first, then saves new user, pies, shops.
 
+
+// const users = [tim, bonnie, peter, linda, graham, laurie]
+// const shops = [pieShop]
+// const pies = [apple, blueberry, pumpkin, bananaCream, chess, cherry, strawberry, rhubarb, pecan, keyLime]
+
+
 User.remove({})
 .then(() => tim.save())
 .then(() => bonnie.save())
@@ -137,27 +144,77 @@ User.remove({})
 .then(() => linda.save())
 .then(() => graham.save())
 .then(() => laurie.save())
+.then(() => console.log("Successfully Users"))
 
-
-Pie.remove({})
-.then(() => apple.save())
-.then(() => blueberry.save())
-.then(() => pumpkin.save())
-.then(() => bananaCream.save())
-.then(() => chess.save())
-.then(() => cherry.save())
-.then(() => strawberry.save())
-.then(() => rhubarb.save())
-.then(() => pecan.save())
-.then(() => keyLime.save())
 
 
 Shop.remove({})
 .then(() => pieShop.save())
+.then(()=> console.log("Successfully Saved Pie Shop"))
 
-
-.then(()=> console.log("Successfully Saved"))
 .then(() => mongoose.connection.close())
 
 
 
+
+/// Danny's eloquent way
+// User.remove({})
+//     .then(() => {
+//     return User.insertMany(users)
+// })
+//     .then(() =>{
+//     console.log('Users Saved!')
+// return Shop.remove({})
+// })
+//     .then(() => {
+//     return
+//     Shop.insertMany(shops)
+// }).then(() => {
+//     console.log('Shops Saved')
+// })
+// .catch((error) => {
+//     console.log(error);
+// })
+// .then(() => {
+//     db.close()
+// })
+
+
+
+
+
+// Pie.remove({})
+// .then(() => apple.save())
+// .then(() => blueberry.save())
+// .then(() => pumpkin.save())
+// .then(() => bananaCream.save())
+// .then(() => chess.save())
+// .then(() => cherry.save())
+// .then(() => strawberry.save())
+// .then(() => rhubarb.save())
+// .then(() => pecan.save())
+// .then(() => keyLime.save())
+
+
+// saving users
+// tim.save()
+// bonnie.save()
+// peter.save()
+// peter.save()
+// linda.save()
+// graham.save()
+// laurie.save()
+
+// Saving the shop full of pies
+
+// shops.forEach(shop => {
+//     shop.pies = pies
+
+//     shop.save()
+//     .then((shop) => {
+//         console.log(`${shop.name} saved`)
+//     })
+//     .catch((error) => {
+//         console.log(error)
+//     })
+// })
