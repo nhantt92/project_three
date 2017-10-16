@@ -13,12 +13,14 @@ font-size: 50px
 
 class PiePage extends Component {
       state={
-        pies: []
+            shop: {
+                pies: []
+            }
     }
 
     //call to getAllPies
     componentWillMount() {
-        this.getAllPies
+        this.getAllPies()
     }
 
 
@@ -26,8 +28,8 @@ class PiePage extends Component {
 
     getAllPies = async () => {
         try {
-            const res = await axios.get('/api/pies')
-            this.setState({pies: res.data})
+            const res = await axios.get('/api/shops')
+            this.setState({shop: res.data[0]})
         } catch(err) {
             console.log("error")
         }
@@ -37,7 +39,7 @@ class PiePage extends Component {
         return (
             <div>
                 <Title>our pies</Title>
-                 {this.state.pies.map(pie => {
+                 {this.state.shop.pies.map(pie => {
                     return (
                         
               <Link key={pie._id}

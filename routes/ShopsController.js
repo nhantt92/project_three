@@ -1,14 +1,13 @@
 const express = require('express')
 const router = express.Router()
-const { User } = require('../db/schema')
+const { Shop } = require('../db/schema')
 
 router.get('/', async (req, res) => {
     try {
-    const shops = await Shop.find({})
+    const shop = await Shop.find({})
     // it's just going to send json instead of sending a string of handlebars
     
-    res.send("Hello")
-    // res.json(shops)
+    res.json(shop)
     } catch (err) {
         res.send(err)
     }

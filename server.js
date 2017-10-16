@@ -4,7 +4,8 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
 const UsersController = require('./routes/UsersController')
-const PiesController = require('./routes/PiesController')
+// const PiesController = require('./routes/PiesController')
+const ShopsController = require('./routes/ShopsController')
 // Create a new app using express
 const app = express();
 // Overwrite built in Promise library in mongoose
@@ -31,7 +32,8 @@ app.use(express.static(`${__dirname}/client/build`))
 
 // Adding Controllers after MiddleWare
 app.use('/api/users', UsersController)
-app.use('/api/pie', PiesController)
+app.use('/api/shops', ShopsController)
+// app.use('/api/pies/pieId', PiesController)
 
 // Index route that renders built React App
 app.get('/', (req,res) => {
