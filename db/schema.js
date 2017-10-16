@@ -32,6 +32,7 @@ const userSchema = mongoose.Schema({
     lastName: String,
     email: String,
     userName: String,
+    pies: [pieSchema]
 })
 
 const Shop = mongoose.model('Shop', shopSchema)

@@ -12,6 +12,10 @@ const ButtonDecor = styled.span`
     margin: 20px auto;
     padding: 10px;
     text-decoration: none;
+    a {
+        text-decoration: none;
+        color: black;
+    }
 `
 
 const ButtonContainter = styled.div`

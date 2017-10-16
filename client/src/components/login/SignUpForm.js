@@ -48,7 +48,8 @@ class SignUpForm extends Component {
     render() {
         // If statement which is triggered after a new user posts is successful
         if (this.state.redirectToUsersPage) {
-            return <Redirect to={`/users/${this.state.newUserId}`} />
+            // This is redirecting to the users individual page
+            return <Redirect to={`users/${this.state.newUserId}`} />
         }
         return (
             <div>

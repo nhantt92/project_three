@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import styled from 'styled-components'
+
+const Users = styled.div`
+text-align: center;
+`
+
 
 class UsersPage extends Component {
     state= {
@@ -31,9 +37,11 @@ class UsersPage extends Component {
                 <h3>Select your name from the list below</h3>
                 {this.state.users.map(user => {
 
-                    return (<div><Link 
+                    return (
+                    <Users><Link 
                     key={user._id} 
-                    to={`${user._id}`}> {user.userName}</Link></div>)
+                    to={`/users/${user._id}`}> {user.firstName} {user.lastName}</Link>
+                    </Users>)
                 })}
             </div>
         );
