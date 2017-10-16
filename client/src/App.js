@@ -11,6 +11,7 @@ import User from './components/login/User'
 import PiePage from './components/pie/PiePage'
 import About from './components/home/About'
 import EditForm from './components/login/EditForm'
+import Pie from './components/pie/Pie'
 
 
 class App extends Component {
@@ -28,6 +29,7 @@ class App extends Component {
           <Route exact path ="/pies" component ={PiePage} />
           <Route exact path = "/about" component ={About} />
           <Route exact path = "/users/:id/editform" component= {EditForm} />
+          <Route exact path = "/shops/pies/:pieId" component = {Pie} />
         </Switch>
         </div>
       </Router>

@@ -31,16 +31,16 @@ const userSchema = mongoose.Schema({
     firstName: String,
     lastName: String,
     email: String,
-    userName: String,
-    pies: [pieSchema]
+    userName: String
+    // pies: [pieSchema]
 })
 
 const Shop = mongoose.model('Shop', shopSchema)
-const Pie = mongoose.model('Pie', pieSchema)
+const Pies = mongoose.model('Pie', pieSchema)
 const User = mongoose.model('User', userSchema)
 
 
 module.exports = {
-Shop, Pie, User
+Shop, Pies, User
    
 }
