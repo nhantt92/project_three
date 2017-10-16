@@ -30,6 +30,7 @@ app.use(express.static(`${__dirname}/client/build`))
 
 // Adding Controllers after MiddleWare
 app.use('/api/users', UsersController)
+// app.use('/api/pie', PiesController)
 
 // Index route that renders built React App
 app.get('/', (req,res) => {

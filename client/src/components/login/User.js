@@ -55,7 +55,12 @@ handleChange = (event, id) => {
     this.setState({ user: clonedUser })
 }
 
-
+showUser = async () => {
+    const userId = this.props.match.params.id
+    const response = await axios.get(`/api/users/${userId}`)
+    this.setState({ user: response.data })
+    console.log(response.data)
+}
 
 toggleEdit = () => {
     this.setState({editUserDetails: !this.state.editUserDetails})
@@ -85,7 +90,7 @@ toggleEdit = () => {
         else {
             return (
                 <div>
-                    <EditForm handleChange={this.state.user} user={this.state.user} />
+                    <EditForm showUser={this.showUser} toggleEdit={this.toggleEdit} handleChange={this.state.user} user={this.state.user} />
                 </div>
             )
         } 

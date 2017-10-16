@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios'
+import { Redirect } from 'react-router-dom'
+
 
 
 class EditForm extends Component {
@@ -18,7 +20,12 @@ class EditForm extends Component {
 
     componentWillMount () {
         this.setState({updatedUser: this.props.user})
+    
     }
+
+    // componentDidUpdate () {
+    //     this.handleRedirect({updatedUser: this.props.user})
+    // }
 
 
 // Method to handle change to edit user
@@ -45,9 +52,23 @@ handleSubmit = async (event) => {
     const res = await axios.patch(`/api/users/${userId}`, {
         user: clonedUser
     })
-    this.setState({updatedUser: res.data})
-    console.log(res.data)
+   
+   await this.props.showUser()
+   this.props.toggleEdit()
+   this.setState({updatedUser: res.data})
 }
+
+
+    // Redirect to user's individual id page
+    // <Redirect push to= "/users/:id" />
+    
+        // console.log(res.data)
+
+
+// custom method to handle redirecting
+// handleRedirect = async (event) => {
+//      <Redirect to={`users/:id`} />
+// }
 
     render() {
         return (
