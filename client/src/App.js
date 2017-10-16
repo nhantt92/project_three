@@ -9,6 +9,7 @@ import SignInPage from './components/login/SignInPage'
 import User from './components/login/User'
 import PiesList from './components/pie/PiesList'
 import About from './components/home/About'
+import EditForm from './components/login/EditForm'
 
 
 class App extends Component {
@@ -25,6 +26,7 @@ class App extends Component {
           <Route exact path="/users/:id" component ={User} />
           <Route exact path ="/pies" component ={PiesList} />
           <Route exact path = "/about" component ={About} />
+          <Route exact path = "/users/:id/editform" component= {EditForm} />
         </Switch>
         </div>
       </Router>

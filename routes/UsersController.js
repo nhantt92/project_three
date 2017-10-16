@@ -26,7 +26,6 @@ router.get('/:id', async (req, res) => {
 })  
 
 
-
 router.post('/', async (req, res) => {
     try{
     // here we create a new instance the user
@@ -52,7 +51,25 @@ router.delete ('/:id', async (req, res) => {
    } 
 })
 
+router.patch('/:id', async (req, res) => {
+    // Get the value of the updated user
+    const updatedUser = req.body.user
 
+    // Grab the specific details from the user 
+    const user = await User.findById(req.params.id)
+
+    user.userName = updatedUser.userName
+    user.lastName = updatedUser.lastName
+    user.firstName = updatedUser.firstName
+    user.email = updatedUser.email
+
+    // Save the user object
+    const saved = await user.save()
+
+    // Send the updated user
+    res.json(saved)
+
+})
 
 
 
