@@ -12,39 +12,39 @@ font-size: 50px
 `
 
 class PiePage extends Component {
-    //   state={
-    //     pies: []
-    // }
+      state={
+        pies: []
+    }
 
-    // //call to getAllPies
-    // componentWillMount() {
-    //     this.getAllPies
-    // }
+    //call to getAllPies
+    componentWillMount() {
+        this.getAllPies
+    }
 
 
-    // // User axios to get all pies 
+    // User axios to get all pies 
 
-    // getAllPies = async () => {
-    //     try {
-    //         const res = await axios.get('/api/pies')
-    //         this.setState({pies: res.data})
-    //     } catch(err) {
-    //         console.log("error")
-    //     }
-    // }
+    getAllPies = async () => {
+        try {
+            const res = await axios.get('/api/pies')
+            this.setState({pies: res.data})
+        } catch(err) {
+            console.log("error")
+        }
+    }
 
     render() {
         return (
             <div>
                 <Title>our pies</Title>
-                {/* {this.state.pies.map(pie => {
+                 {this.state.pies.map(pie => {
                     return (
                         
               <Link key={pie._id}
               to={`/pies/${pie._id}`}> {pie.flavor}</Link>
                         
                     )
-                })} */}
+                })} 
                 
             </div>
         );

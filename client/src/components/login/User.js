@@ -55,6 +55,7 @@ handleChange = (event, id) => {
     this.setState({ user: clonedUser })
 }
 
+// custom method to have user's updated info sent back tot he database. 
 showUser = async () => {
     const userId = this.props.match.params.id
     const response = await axios.get(`/api/users/${userId}`)
@@ -83,6 +84,7 @@ toggleEdit = () => {
                
                 <button onClick={this.toggleEdit}>Edit Account</button>
                 <button onClick={this.deleteUser}>Delete User</button>
+                <Link to ="/users">return to all users</Link>
                 </div>
             )
         }
