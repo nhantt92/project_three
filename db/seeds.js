@@ -98,35 +98,35 @@ const bonnie = new User ({
     firstName: "bonnie",
     lastName: "johnson",
     email: "bonnie@gmail.com",
-    userName: "bonniejohnson",
+    userName: "bonniejohnson"
 })
 
 const peter = new User ({
     firstName: "peter",
     lastName: "frampton",
     email: "peter@gmail.com",
-    userName: "peterfrapton",
+    userName: "peterfrapton"
 })
 
 const linda = new User ({
     firstName: "linda",
     lastName: "williams",
     email: "linda@gmail.com",
-    userName: "lindawilliams",
+    userName: "lindawilliams"
 })
 
 const graham = new User ({
     firstName: "graham",
     lastName: "nash",
     email: "graham@gmail.com",
-    userName: "grahamnash",
+    userName: "grahamnash"
 })
 
 const laurie = new User ({
     firstName: "laurie",
     lastName: "anderson",
     email: "laurie@gmail.com",
-    userName: "laurieanderson",
+    userName: "laurieanderson"
 })
 
 // Uses promises to make sure to remove it run first, then saves new user, pies, shops.
@@ -137,22 +137,32 @@ const laurie = new User ({
 // const pies = [apple, blueberry, pumpkin, bananaCream, chess, cherry, strawberry, rhubarb, pecan, keyLime]
 
 
-User.remove({})
-.then(() => tim.save())
-.then(() => bonnie.save())
-.then(() => peter.save())
-.then(() => linda.save())
-.then(() => graham.save())
-.then(() => laurie.save())
-.then(() => console.log("Successfully Users"))
-
-
 
 Shop.remove({})
 .then(() => pieShop.save())
 .then(()=> console.log("Successfully Saved Pie Shop"))
 
+
+User.remove({})
+.then(() => tim.save())
+.catch((error) => {console.log(error)})
+.then(() => bonnie.save())
+.catch((error) => {console.log(error)})
+.then(() => peter.save())
+.catch((error) => {console.log(error)})
+.then(() => linda.save())
+.catch((error) => {console.log(error)})
+.then(() => graham.save())
+.catch((error) => {console.log(error)})
+.then(() => laurie.save())
+.catch((error) => {console.log(error)})
+.then(() => console.log("Successfully Users"))
 .then(() => mongoose.connection.close())
+
+
+
+
+
 
 
 

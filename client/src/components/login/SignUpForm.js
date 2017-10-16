@@ -10,6 +10,7 @@ class SignUpForm extends Component {
             lastName: '',
             email: '',
             userName: '',
+            pies: []
         }, 
         redirectToUsersPage: false,
         newUserId: ''

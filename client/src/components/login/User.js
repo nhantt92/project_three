@@ -17,9 +17,10 @@ class User extends Component {
 // Get information about the user when it initially mounts
 
 async componentWillMount () {
-    const { userId } = this.props.match.params
+    const userId  = this.props.match.params.id
     const res = await axios.get(`/api/users/${userId}`)
     this.setState({user: res.data})
+    // console.log(res.data)
 }
 
 /// I will want to do this to create a custom pie
@@ -28,7 +29,7 @@ async componentWillMount () {
   createNewPie = async () => {
     const { userId } = this.props.match.params
     const res = await axios.post(`/api/users/${userId}/pies`)
-    console.log(res.data)
+    // console.log(res.data)
     this.setState({user: res.data})
   }
 
@@ -37,7 +38,10 @@ async componentWillMount () {
     render() {
         return (
             <div>
-                <h1>{this.state.user.firstName}'s Account</h1>
+                <h1>{this.state.user.firstName} {this.state.user.lastName}'s Account</h1>
+                <h2>{this.state.user.email}</h2>
+                <h2>username: {this.state.user.userName}</h2>
+                <h2>Pies: {this.state.user.pies}</h2>
               
             </div>
         );
