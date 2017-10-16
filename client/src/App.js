@@ -23,13 +23,13 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component = {HomePage} />
           <Route exact path = "/users" component = {UsersPage} />
-          <Route exact path = "/signup" component = {SignUpForm} />
+          <Route exact path = "/signup" component = {SignUpForm} />8
           <Route exact path ="/signin" component = {SignInPage} />
           <Route exact path="/users/:id" component = {User} />
           <Route exact path ="/pies" component ={PiePage} />
           <Route exact path = "/about" component ={About} />
           <Route exact path = "/users/:id/editform" component= {EditForm} />
-          <Route exact path = "/shops/pies/:pieId" component = {Pie} />
+          <Route exact path = "/pies/:pieId" component = {Pie} />
         </Switch>
         </div>
       </Router>

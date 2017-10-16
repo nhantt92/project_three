@@ -7,7 +7,13 @@ text-align: center;
 font-family: 'Lobster Two', cursive;
 text-decoration: underline;
 font-size: 50px
-
+`
+const PieDescriptionStyle = styled.div`
+text-align: center;
+font-family: "Lobster Two", sans-serif;
+`
+const ImageStyle = styled.div`
+    
 `
 
 class Pie extends Component {
@@ -21,19 +27,18 @@ class Pie extends Component {
     }
 
     // call to get one pie
-
     componentWillMount() {
         this.getOnePie()
     }
 
-    // get specific pie
-
+    // Use axios to get specific pie
     getOnePie = async () => {
         try {
             const { pieId } = this.props.match.params
-            const res = await axios.get('/api/shops/pies/pieId')
+            const res = await axios.get(`/api/shops/pies/${pieId}`)
             // this.setState({shop: res.data[0]})
             this.setState({pie: res.data})
+            console.log(res.data)
         } catch(err) {
             console.log("error")
         }
@@ -43,7 +48,20 @@ class Pie extends Component {
     render() {
         return (
             <div>
-                <Title>{pie.flavor}</Title>
+                <Title>
+                    <h2> {this.state.pie.flavor} pie</h2>
+               </Title>
+               <ImageStyle>
+                   {this.state.pie.image}
+               </ImageStyle>
+                <PieDescriptionStyle>
+                    {this.state.pie.description}
+                    <p>$ {this.state.pie.price}</p>  
+                </PieDescriptionStyle>
+                    
+                  
+
+              
             </div>
         );
     }

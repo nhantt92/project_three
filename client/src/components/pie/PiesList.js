@@ -1,43 +1,43 @@
-import React, { Component } from 'react';
-import styled from 'styled-components'
-import axios from 'axios'
+// import React, { Component } from 'react';
+// import styled from 'styled-components'
+// import axios from 'axios'
 
-const Title = styled.h1`
-text-align: center;
-font-family: 'Lobster Two', cursive;
-text-decoration: underline;
-font-size: 50px
+// const Title = styled.h1`
+// text-align: center;
+// font-family: 'Lobster Two', cursive;
+// text-decoration: underline;
+// font-size: 50px
 
-`
+// `
 
-class PiesList extends Component {
-      state={
-        pies: []
-    }
+// class PiesList extends Component {
+//       state={
+//         pies: []
+//     }
 
-    //calll
+//     //calll
 
 
-    // User axios to get all pies 
+//     // User axios to get all pies 
 
-    getAllPies = async () => {
-        try {
-            const res = await axios.get('/api/pies')
-            this.setState({pies: res.data})
-        } catch(err) {
-            console.log("error")
-        }
-    }
+//     getAllPies = async () => {
+//         try {
+//             const res = await axios.get('/api/pies')
+//             this.setState({pies: res.data})
+//         } catch(err) {
+//             console.log("error")
+//         }
+//     }
 
-    render() {
-        return (
-            <div>
-                <Title>our pies</Title>
+//     render() {
+//         return (
+//             <div>
+//                 <Title>our pies</Title>
                 
-            </div>
-        );
-    }
-}
+//             </div>
+//         );
+//     }
+// }
 
-export default PiesList;
+// export default PiesList;
 

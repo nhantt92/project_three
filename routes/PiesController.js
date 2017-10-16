@@ -2,6 +2,8 @@ const express = require('express')
 const { Shop, Pies } = require('../db/schema')
 const router = express.Router({ mergeParams: true})
 
+// this is api/shops/pies
+
 router.get('/', async (req, res) => {
     try {
         //  find One 
