@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 const Title = styled.h1`
 text-align: center;
@@ -13,7 +14,10 @@ text-align: center;
 font-family: "Lobster Two", sans-serif;
 `
 const ImageStyle = styled.div`
-    
+img: {max-height: 100px
+max-width: 100px;
+margin: 0 auto
+}
 `
 
 class Pie extends Component {
@@ -52,15 +56,14 @@ class Pie extends Component {
                     <h2> {this.state.pie.flavor} pie</h2>
                </Title>
                <ImageStyle>
-                   {this.state.pie.image}
+                  <img src= {this.state.pie.image} alt={this.state.pie.flavor} />
                </ImageStyle>
                 <PieDescriptionStyle>
                     {this.state.pie.description}
                     <p>$ {this.state.pie.price}</p>  
                 </PieDescriptionStyle>
                     
-                  
-
+                <Link to="/pies">return to pies</Link>
               
             </div>
         );
