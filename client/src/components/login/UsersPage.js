@@ -48,6 +48,7 @@ class UsersPage extends Component {
                     to={`/users/${user._id}`}> {user.firstName} {user.lastName}</Link>
                     </Users>)
                 })}
+                
                 <SignUpForm />
                 
             </UsersList>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import UsersPage from './UsersPage'
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 
 class User extends Component {
     state ={
@@ -11,7 +11,8 @@ class User extends Component {
             email: '',
             userName: '',
             pies: []
-        }
+        },
+        redirectToUsers: false
     }
 
 // Get information about the user when it initially mounts
@@ -33,9 +34,17 @@ async componentWillMount () {
     this.setState({user: res.data})
   }
 
-
+deleteUser = async (id) => {
+    // console.log(res.data)
+    const userId  = this.props.match.params.id
+    const res = await axios.delete(`/api/users/${userId}`)
+    this.setState({user: res.data, redirectToUsers: true})
+}
 
     render() {
+        if (this.state.redirectToUsers) {
+            return <Redirect to={`/users`} />
+        }
         return (
             <div>
                 <h1>{this.state.user.firstName} {this.state.user.lastName}'s Account</h1>
@@ -43,6 +52,7 @@ async componentWillMount () {
                 <h2>username: {this.state.user.userName}</h2>
                 <h2>Pies: {this.state.user.pies}</h2>
               
+                <button onClick={this.deleteUser}>Delete User</button>
             </div>
         );
     }

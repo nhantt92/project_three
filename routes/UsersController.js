@@ -40,6 +40,18 @@ router.post('/', async (req, res) => {
     }    
 })
 
+router.delete ('/:id', async (req, res) => {
+   
+   try{ // Find the user
+   const user = await User.findById(req.params.id).remove()
+    const users = await User.find({})
+   //Save the updated change
+   res.send(users)
+   } catch (error){
+       res.send(error)
+   } 
+})
+
 
 
 
