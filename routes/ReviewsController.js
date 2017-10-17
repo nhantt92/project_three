@@ -16,7 +16,7 @@ router.post('/', async (req, res) => {
     // create an empty review model
     // the default values will be in there for title and description
 try {
-    const newReview = new Review()
+    const newReview = new Review(req.body.review)
     // Find the pie coming from the route
     const shop = await Shop.findOne({})
     const pie = shop.pies.id(req.params.pieId)

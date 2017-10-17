@@ -6,14 +6,8 @@ const mongoose = require('mongoose')
 // 
 
 const reviewSchema = mongoose.Schema({
-    title: {
-      type: String,
-      default: "New Review"
-    },
-    description: {
-        type: String,
-        default: "My thoughts..."
-    }
+    title: String,
+    description: String
 })
 
 const pieSchema = mongoose.Schema({
@@ -44,7 +38,7 @@ const userSchema = mongoose.Schema({
     lastName: String,
     email: String,
     userName: String
-    // pies: [pieSchema]
+    
 })
 
 const Shop = mongoose.model('Shop', shopSchema)

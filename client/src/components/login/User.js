@@ -80,7 +80,7 @@ toggleEdit = () => {
               <h1>{this.state.user.firstName} {this.state.user.lastName}'s Account</h1>
                 <h2>{this.state.user.email}</h2>
                 <h2> username: {this.state.user.userName}</h2>
-                <h2>Pies: {this.state.user.pies}</h2>
+            
                
                 <button onClick={this.toggleEdit}>Edit Account</button>
                 <button onClick={this.deleteUser}>Delete User</button>

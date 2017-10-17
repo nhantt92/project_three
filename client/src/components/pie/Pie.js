@@ -3,7 +3,8 @@ import axios from 'axios'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import ReviewPage from '../review/ReviewPage'
-import ReviewList from '../review/ReviewList'
+// import ReviewList from '../review/ReviewList'
+import ReviewForm from '../review/ReviewForm'
 
 const Title = styled.div`
 text-align: center;
@@ -31,7 +32,6 @@ class Pie extends Component {
             image:'',
             reviews: []
         }
-       
     }
 
     // call to get one pie
@@ -52,7 +52,7 @@ class Pie extends Component {
         }
     }
 
- 
+
 // WRITE a REVIEW 
 // Post route to create a new and empty review
     createNewReview = async () => {
@@ -77,10 +77,10 @@ class Pie extends Component {
     // Create a Patch for review
     // Add onChange listener for title and description
 
-    handleChange = (event, reviewId) => {
-        const attribute = event.target.name
-        const  { pieId } = this.props.match.params
-    }
+    // handleChange = (event, reviewId) => {
+    //     const attribute = event.target.name
+    //     const  { pieId } = this.props.match.params
+    // }
     
 
     render() {
@@ -108,13 +108,13 @@ class Pie extends Component {
                         <button onClick={() => this.deleteReview(review._id)}>delete review</button>
                         </div>    
                     )
-                })}
+                })} 
             <button onClick={this.createNewReview}>Write review</button>
                 
 
                 <Link to="/pies">return to pies</Link>
-            
-                {/* <ReviewList reviews={this.state.pies.reviews} /> */}
+                <ReviewForm reloadPie={this.getOnePie} pieId={this.state.pie._id} />
+                {/* <ReviewList review={this.state.pies.reviews}  deleteReview= {this.deleteReview} /> */}
             </div>
         );
     }

@@ -10,8 +10,8 @@ class EditForm extends Component {
             firstName: '',
             lastName: '' ,
             email: '',
-            userName: '',
-            pies: []
+            userName: ''
+            
         },
         redirectToUsers: false,
         id: ''
