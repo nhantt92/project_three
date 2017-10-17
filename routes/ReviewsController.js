@@ -17,42 +17,64 @@ router.post('/', async (req, res) => {
     // the default values will be in there for title and description
 try {
     const newReview = new Review()
-
     // Find the pie coming from the route
     const shop = await Shop.findOne({})
     const pie = shop.pies.id(req.params.pieId)
-
     // Push the new review into the pie's list of reviews
-    
     pie.reviews.push(newReview)
     // save the updated pie to the datebase
     const saved = await shop.save()
-
     // send the pie object back to react
     res.json(pie)
 }
 catch (err) {
     res.send(err)
 }
-
 })
-
 // create input and handle change in the state -- handle change state function
-
 // handleSubmit is the onBlur
 
-// router.patch('/:id', async (req, res) => {
-//     const updatedReview = req.body.review
+router.patch('/:id', async (req, res) => {
+    try {
+        // get the value of the updated review
+    const updatedReview = req.body.review
+        // Find the shop
+    const shop = await Shop.findOne({})
+    // Find the pie
+    const pie =  shop.pies.findById(req.params.pieId)
+    // Grab the specific review
+    const review = pie.reviews.id(req.params.id)
 
-//     const user = await Pie.findById(req.params.userId)
-// })
+    // Update the title and description
+    review.title = updatedReview.title
+    review.description = updatedReview.description
+
+    // Save the shop object
+    const saved = await shop.save()
+
+    res.json(pie)
+    } 
+    catch (err) {
+        res.send(err)
+    }
+})
 
 // DELETE a review by id
 
 router.delete('/:id', async (req, res) => {
+    try{
     const shop = await Shop.findOne({})
     const pie = shop.pies.id(req.params.pieId)
+    console.log(req.params.pieId)
+    pie.reviews.id(req.params.id).remove()
+    console.log(req.params.id)
+    const saved = await shop.save()
 
+    res.json(pie)
+    }
+    catch (err) {
+        res.send(err)
+    }
 })
 
 module.exports = router

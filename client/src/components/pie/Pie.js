@@ -67,10 +67,19 @@ class Pie extends Component {
     // CREATE DELETE for Review
     // Create an OnClick that deletes a review
     deleteReview = async (reviewId) => {
-        const { pieId } = this.props.match.param
+        const { pieId } = this.props.match.params
         const id = reviewId
         const res = await axios.delete(`/api/shops/pies/${pieId}/reviews/${id}`)
         this.setState({pie: res.data})
+        console.log(res.data)
+    }
+
+    // Create a Patch for review
+    // Add onChange listener for title and description
+
+    handleChange = (event, reviewId) => {
+        const attribute = event.target.name
+        const  { pieId } = this.props.match.params
     }
     
 
@@ -96,14 +105,15 @@ class Pie extends Component {
                         <span key={review._id}></span>
                         <h4>{review.title}</h4>
                         <p>{review.description}</p>
+                        <button onClick={() => this.deleteReview(review._id)}>delete review</button>
                         </div>    
                     )
                 })}
+            <button onClick={this.createNewReview}>Write review</button>
+                
 
                 <Link to="/pies">return to pies</Link>
-                <button onClick={this.createNewReview}>Write review</button>
-                <button onClick={this.deleteReview}>delete review</button>
-
+            
                 {/* <ReviewList reviews={this.state.pies.reviews} /> */}
             </div>
         );
