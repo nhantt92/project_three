@@ -25,10 +25,14 @@ class ReviewForm extends Component {
     handleSubmit = async (event) => {
         event.preventDefault()
         const pieId = this.props.pieId
+        const emptyForm = {
+            title: '',
+            description: ''
+        }
         const res = await axios.post(`/api/shops/pies/${pieId}/reviews`, {
             review: this.state.newReview
         })
-        this.setState({redirectToPiePage: true, newReviewId: res.data._id})
+        this.setState({redirectToPiePage: true, newReviewId: res.data._id, newReview: emptyForm})
         this.props.reloadPie();
         console.log(res)
     }

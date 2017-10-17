@@ -103,13 +103,13 @@ class Pie extends Component {
                     return (
                         <div>
                         <span key={review._id}></span>
-                        <h4>{review.title}</h4>
+                        <h5>{review.title}</h5>
                         <p>{review.description}</p>
                         <button onClick={() => this.deleteReview(review._id)}>delete review</button>
                         </div>    
                     )
                 })} 
-            <button onClick={this.createNewReview}>Write review</button>
+            {/* <button onClick={this.createNewReview}>Write review</button> */}
                 
 
                 <Link to="/pies">return to pies</Link>
