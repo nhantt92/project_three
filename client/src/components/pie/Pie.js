@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+import ReviewPage from '../review/ReviewPage'
+import ReviewList from '../review/ReviewList'
 
 const Title = styled.div`
 text-align: center;
@@ -26,8 +28,10 @@ class Pie extends Component {
             flavor: '',
             price: '',
             description: '',
-            image:''
+            image:'',
+            reviews: []
         }
+       
     }
 
     // call to get one pie
@@ -42,13 +46,33 @@ class Pie extends Component {
             const res = await axios.get(`/api/shops/pies/${pieId}`)
             // this.setState({shop: res.data[0]})
             this.setState({pie: res.data})
-            console.log(res.data)
+            // console.log(res.data)
         } catch(err) {
             console.log("error")
         }
     }
 
-    // alt={this.state.pie.flavor}
+ 
+// WRITE a REVIEW 
+// Post route to create a new and empty review
+    createNewReview = async () => {
+        // const newReview = [...this.state.review]
+        const { pieId } = this.props.match.params
+        const res = await axios.post(`/api/shops/pies/${pieId}/reviews`)
+        // console.log(res.data)
+        // we're sending "saving" the pie back...
+        this.setState({pie: res.data})
+    }
+
+    // CREATE DELETE for Review
+    // Create an OnClick that deletes a review
+    deleteReview = async (reviewId) => {
+        const { pieId } = this.props.match.param
+        const id = reviewId
+        const res = await axios.delete(`/api/shops/pies/${pieId}/reviews/${id}`)
+        this.setState({pie: res.data})
+    }
+    
 
     render() {
         return (
@@ -63,9 +87,24 @@ class Pie extends Component {
                     {this.state.pie.description}
                     <p>$ {this.state.pie.price}</p>  
                 </PieDescriptionStyle>
-                    
+
+
+
+                {this.state.pie.reviews.map((review) => {
+                    return (
+                        <div>
+                        <span key={review._id}></span>
+                        <h4>{review.title}</h4>
+                        <p>{review.description}</p>
+                        </div>    
+                    )
+                })}
+
                 <Link to="/pies">return to pies</Link>
-              
+                <button onClick={this.createNewReview}>Write review</button>
+                <button onClick={this.deleteReview}>delete review</button>
+
+                {/* <ReviewList reviews={this.state.pies.reviews} /> */}
             </div>
         );
     }

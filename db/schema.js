@@ -5,6 +5,17 @@ const mongoose = require('mongoose')
 // I could refactor so that the users can have an empty pies array nested in
 // 
 
+const reviewSchema = mongoose.Schema({
+    title: {
+      type: String,
+      default: "New Review"
+    },
+    description: {
+        type: String,
+        default: "My thoughts..."
+    }
+})
+
 const pieSchema = mongoose.Schema({
     flavor: String,
     price:{
@@ -18,7 +29,8 @@ const pieSchema = mongoose.Schema({
     image: {
         type: String,
         default: "Pie Image"
-    }
+    },
+    reviews: [reviewSchema]
 })
 
 const shopSchema = mongoose.Schema({
@@ -38,9 +50,10 @@ const userSchema = mongoose.Schema({
 const Shop = mongoose.model('Shop', shopSchema)
 const Pies = mongoose.model('Pie', pieSchema)
 const User = mongoose.model('User', userSchema)
+const Review = mongoose.model('Review', reviewSchema)
 
 
 module.exports = {
-Shop, Pies, User
+Shop, Pies, User, Review
    
 }

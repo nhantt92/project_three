@@ -4,8 +4,20 @@ mongoose.connect(process.env.MONGODB_URI, {useMongoClient: true})
 mongoose.Promise = global.Promise
 
 
-const { Shop, Pies, User } = require("./schema")
+const { Shop, Pies, User, Review } = require("./schema")
 
+
+const yum = new Review({
+    title: 'Yum',
+    description: "the best"
+
+})
+
+const loveit = new Review({
+    title: 'so good',
+    description: "loved it"
+
+})
 
 // PIES
 
@@ -14,20 +26,23 @@ const apple = new Pies ({
     price: 10,
     description: "The all-American favorite! An apple pie, regional variation apple tart, is a fruit pie, in which the principal filling ingredient is apple. It is, on occasion, served with whipped cream or ice cream on top, or alongside cheddar cheese.",
     image: "https://i.imgur.com/IuABb8S.jpg",
+    reviews: [yum, loveit]
 })
 
 const blueberry = new Pies ({
     flavor: "blueberry",
     price: 10,
     description: "Blueberry pie is considered one of the easiest pies to make because it does not require pitting or peeling of fruit. It usually has a top and bottom crust.",
-    image: "https://i.imgur.com/hwaLcLv.jpg"
+    image: "https://i.imgur.com/hwaLcLv.jpg",
+    reviews: []
 })
 
 const pumpkin = new Pies ({
     flavor: "pumpkin",
     price: 10,
     description: "Pumpkin pie is a sweet dessert pie with a spiced, pumpkin-based custard filling. The pumpkin is a symbol of harvest time, and pumpkin pie is often eaten during the fall and early winter.",
-    image: "https://i.imgur.com/KGSLCM3.jpg"
+    image: "https://i.imgur.com/KGSLCM3.jpg",
+    reviews: []
 })
 
 const bananaCream = new Pies ({
@@ -35,18 +50,21 @@ const bananaCream = new Pies ({
     price: 10,
     description: "A cream pie is a type of pie or cake filled with a rich custard or pudding that is made from milk, cream, flour, and eggs.",
     image: "https://i.imgur.com/HHKQIhe.jpg",
+    reviews: []
 })
 const chess = new Pies ({
     flavor: "chess",
     price: 10,
     description: "Chess pie is a dessert characteristic of Southern U.S. cuisine. Usually with delicate hints of lemon",
-    image: "https://i.imgur.com/5gbBZrS.jpg"
+    image: "https://i.imgur.com/5gbBZrS.jpg",
+    reviews: []
 })
 const cherry = new Pies ({
     flavor: "cherry",
     price: 10,
     description: "Cherry pie is a pie baked with a cherry filling. Traditionally, cherry pie is made with tart rather than sweet cherries. Morello cherries are one of the most common kinds of cherry used, but other varieties such as the black cherry may also be used.",
     image: "https://i.imgur.com/94yR0Gm.jpg",
+    reviews: []
 })
 
 const strawberry = new Pies ({
@@ -54,6 +72,7 @@ const strawberry = new Pies ({
     price: 10,
     description: "Strawberry pie is a dessert food consisting mainly of strawberries.",
     image: "https://i.imgur.com/ROTcGBD.jpg",
+    reviews: []
 })
 
 const rhubarb = new Pies ({
@@ -61,6 +80,7 @@ const rhubarb = new Pies ({
     price: 10,
     description: "Rhubarb pie is a pie with a rhubarb filling. Popular in the UK, where rhubarb has been cultivated since the 1600s, its introduction to Europe from China is attributed to Marco Polo",
     image: "https://i.imgur.com/vJZxyCI.jpg",
+    reviews: []
 })
 
 const pecan = new Pies ({
@@ -68,6 +88,7 @@ const pecan = new Pies ({
     price: 10,
     description: "Pecan pie is a pie of pecan nuts mixed with a filling of eggs, butter, and sugar. Variations may include white or brown sugar, sugar syrup, molasses, maple syrup, or honey.",
     image: "https://i.imgur.com/aW5ZuT1.jpg",
+    reviews: []
 })
 
 const keyLime = new Pies ({
@@ -75,6 +96,7 @@ const keyLime = new Pies ({
     price: 10,
     description: "Key lime pie is an American dessert made of Key lime juice, egg yolks, and sweetened condensed milk in a pie crust. The traditional Conch version uses the egg whites to make a meringue topping.",
     image: "https://i.imgur.com/0gUOGp4.jpg",
+    reviews: []
 })
 
 // SHOP

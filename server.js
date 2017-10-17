@@ -6,6 +6,7 @@ const mongoose = require('mongoose');
 const UsersController = require('./routes/UsersController')
 const PiesController = require('./routes/PiesController')
 const ShopsController = require('./routes/ShopsController')
+const ReviewsController = require('./routes/ReviewsController')
 // Create a new app using express
 const app = express();
 // Overwrite built in Promise library in mongoose
@@ -34,6 +35,7 @@ app.use(express.static(`${__dirname}/client/build`))
 app.use('/api/users', UsersController)
 app.use('/api/shops', ShopsController)
 app.use('/api/shops/pies', PiesController)
+app.use('/api/shops/pies/:pieId/reviews', ReviewsController)
 
 // Index route that renders built React App
 app.get('/', (req,res) => {
