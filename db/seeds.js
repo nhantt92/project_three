@@ -20,21 +20,21 @@ const blueberry = new Pies ({
     flavor: "blueberry",
     price: 10,
     description: "Blueberry pie is considered one of the easiest pies to make because it does not require pitting or peeling of fruit. It usually has a top and bottom crust.",
-    image: "images/blueberry_pie.jpg"
+    image: "https://i.imgur.com/hwaLcLv.jpg"
 })
 
 const pumpkin = new Pies ({
     flavor: "pumpkin",
     price: 10,
     description: "Pumpkin pie is a sweet dessert pie with a spiced, pumpkin-based custard filling. The pumpkin is a symbol of harvest time, and pumpkin pie is often eaten during the fall and early winter.",
-    image: "images/pumpkinpie.jpg"
+    image: "https://i.imgur.com/KGSLCM3.jpg"
 })
 
 const bananaCream = new Pies ({
     flavor: "banana cream",
     price: 10,
     description: "A cream pie is a type of pie or cake filled with a rich custard or pudding that is made from milk, cream, flour, and eggs.",
-    image: "images/bananacream.jpg",
+    image: "https://i.imgur.com/HHKQIhe.jpg",
 })
 const chess = new Pies ({
     flavor: "chess",
@@ -46,35 +46,35 @@ const cherry = new Pies ({
     flavor: "cherry",
     price: 10,
     description: "Cherry pie is a pie baked with a cherry filling. Traditionally, cherry pie is made with tart rather than sweet cherries. Morello cherries are one of the most common kinds of cherry used, but other varieties such as the black cherry may also be used.",
-    image: "images/cherry_pie.jpg",
+    image: "https://i.imgur.com/94yR0Gm.jpg",
 })
 
 const strawberry = new Pies ({
     flavor: "strawberry",
     price: 10,
     description: "Strawberry pie is a dessert food consisting mainly of strawberries.",
-    image: "images/strawberry_pie.jpg",
+    image: "https://i.imgur.com/ROTcGBD.jpg",
 })
 
 const rhubarb = new Pies ({
     flavor: "rhubarb",
     price: 10,
     description: "Rhubarb pie is a pie with a rhubarb filling. Popular in the UK, where rhubarb has been cultivated since the 1600s, its introduction to Europe from China is attributed to Marco Polo",
-    image: "images/rhubarb_pie.jpg",
+    image: "https://i.imgur.com/vJZxyCI.jpg",
 })
 
 const pecan = new Pies ({
     flavor: "pecan",
     price: 10,
     description: "Pecan pie is a pie of pecan nuts mixed with a filling of eggs, butter, and sugar. Variations may include white or brown sugar, sugar syrup, molasses, maple syrup, or honey.",
-    image: "images/pecan_bourbon_pie.jpg",
+    image: "https://i.imgur.com/aW5ZuT1.jpg",
 })
 
 const keyLime = new Pies ({
     flavor: "key lime",
     price: 10,
     description: "Key lime pie is an American dessert made of Key lime juice, egg yolks, and sweetened condensed milk in a pie crust. The traditional Conch version uses the egg whites to make a meringue topping.",
-    image: "images/key_lime_pie.jpeg",
+    image: "https://i.imgur.com/0gUOGp4.jpg",
 })
 
 // SHOP

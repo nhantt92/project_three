@@ -3,7 +3,7 @@ import axios from 'axios'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
-const Title = styled.h1`
+const Title = styled.div`
 text-align: center;
 font-family: 'Lobster Two', cursive;
 text-decoration: underline;

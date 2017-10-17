@@ -8,7 +8,11 @@ text-align: center;
 font-family: 'Lobster Two', cursive;
 text-decoration: underline;
 font-size: 50px
+`
 
+const PieImage = styled.div`
+max-width: 200;
+max-height: 100;
 `
 
 class PiePage extends Component {
@@ -41,9 +45,10 @@ class PiePage extends Component {
                 <Title>our pies</Title>
                  {this.state.shop.pies.map(pie => {
                     return (
-                        
-              <Link key={pie._id}
-              to={`/pies/${pie._id}`}> <img src={pie.image} /> </Link>
+                 <PieImage>    
+              <Link key={pie._id} to={`/pies/${pie._id}`}> 
+              <img src={pie.image}/> </Link> 
+              </PieImage> 
                         
                     )
                 })} 

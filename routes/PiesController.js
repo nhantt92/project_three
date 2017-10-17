@@ -18,9 +18,15 @@ router.get('/', async (req, res) => {
 //Get One Shop and the array of pies and the single pie
 router.get('/:pieId', async (req, res) => {
     // grabbing the shop by id
+    try {
     const shop =  await Shop.findOne({})
     const pie = shop.pies.id(req.params.pieId)
     res.json(pie)
+    }
+    catch (err) {
+        res.send(err)
+    }
 })
+
 
 module.exports = router
