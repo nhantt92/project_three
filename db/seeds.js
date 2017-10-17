@@ -40,7 +40,7 @@ const chess = new Pies ({
     flavor: "chess",
     price: 10,
     description: "Chess pie is a dessert characteristic of Southern U.S. cuisine. Usually with delicate hints of lemon",
-    image: "images/chess_pie.jpg"
+    image: "https://i.imgur.com/5gbBZrS.jpg"
 })
 const cherry = new Pies ({
     flavor: "cherry",

@@ -3,6 +3,14 @@ import styled from 'styled-components'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 
+const PiePageContainer = styled.div`
+background-color: white;
+border-radius: 2px;
+max-width: 1000px;
+margin: 20px auto;
+border: 1px solid grey;
+`
+
 const Title = styled.h1`
 text-align: center;
 font-family: 'Lobster Two', cursive;
@@ -10,10 +18,22 @@ text-decoration: underline;
 font-size: 50px
 `
 
-const PieImage = styled.div`
-max-width: 200;
-max-height: 100;
+const PieContainer = styled.div`
+
+display: inline-flex;
+flex-direction: row;
+flex-wrap: wrap
+justify-content: space-around;
+align-items: space-between;
 `
+const PieImage = styled.image`
+// margin 0 auto;
+margin-left: 30px;
+margin-right: 20px;
+img{
+    max-width: 200px; 
+  }
+  `
 
 class PiePage extends Component {
       state={
@@ -41,19 +61,25 @@ class PiePage extends Component {
 
     render() {
         return (
-            <div>
+            <PiePageContainer>
                 <Title>our pies</Title>
                  {this.state.shop.pies.map(pie => {
                     return (
-                 <PieImage>    
+                 <PieContainer>    
               <Link key={pie._id} to={`/pies/${pie._id}`}> 
-              <img src={pie.image}/> </Link> 
-              </PieImage> 
+
+                        <PieImage>
+                        <img src={pie.image}/> 
+                        </PieImage>
+              
+              
+              </Link> 
+              </PieContainer> 
                         
                     )
                 })} 
                 
-            </div>
+            </PiePageContainer>
         );
     }
 }

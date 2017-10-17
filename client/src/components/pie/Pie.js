@@ -14,9 +14,9 @@ text-align: center;
 font-family: "Lobster Two", sans-serif;
 `
 const ImageStyle = styled.div`
-img: {max-height: 100px
-max-width: 100px;
-margin: 0 auto
+align: center;
+img {
+max-height: 300px
 }
 `
 
