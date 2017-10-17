@@ -13,14 +13,14 @@ const apple = new Pies ({
     flavor: "apple",
     price: 10,
     description: "The all-American favorite! An apple pie, regional variation apple tart, is a fruit pie, in which the principal filling ingredient is apple. It is, on occasion, served with whipped cream or ice cream on top, or alongside cheddar cheese.",
-    image: "http://relish.com/wp-content/uploads/2013/07/usapple_all-american-apple-pie.jpg",
+    image: "images/apple_pie.jpg",
 })
 
 const blueberry = new Pies ({
     flavor: "blueberry",
     price: 10,
     description: "Blueberry pie is considered one of the easiest pies to make because it does not require pitting or peeling of fruit. It usually has a top and bottom crust.",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCLu6OJVY9UegrYC548EK0x7cM1VeLrxNjb-ugHS20SHoJEigx"
+    image: "images/blueberry_pie.jpg"
 })
 
 const pumpkin = new Pies ({

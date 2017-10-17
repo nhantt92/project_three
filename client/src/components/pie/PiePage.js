@@ -43,7 +43,7 @@ class PiePage extends Component {
                     return (
                         
               <Link key={pie._id}
-              to={`/pies/${pie._id}`}> {pie.flavor} </Link>
+              to={`/pies/${pie._id}`}> <img src={pie.image} /> </Link>
                         
                     )
                 })} 
