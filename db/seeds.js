@@ -13,7 +13,7 @@ const apple = new Pies ({
     flavor: "apple",
     price: 10,
     description: "The all-American favorite! An apple pie, regional variation apple tart, is a fruit pie, in which the principal filling ingredient is apple. It is, on occasion, served with whipped cream or ice cream on top, or alongside cheddar cheese.",
-    image: "images/apple_pie.jpg",
+    image: "https://i.imgur.com/IuABb8S.jpg",
 })
 
 const blueberry = new Pies ({
@@ -67,7 +67,7 @@ const pecan = new Pies ({
     flavor: "pecan",
     price: 10,
     description: "Pecan pie is a pie of pecan nuts mixed with a filling of eggs, butter, and sugar. Variations may include white or brown sugar, sugar syrup, molasses, maple syrup, or honey.",
-    image: "images/pecan_pie.jpg",
+    image: "images/pecan_bourbon_pie.jpg",
 })
 
 const keyLime = new Pies ({

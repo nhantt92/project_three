@@ -47,7 +47,8 @@ class Pie extends Component {
             console.log("error")
         }
     }
-    
+
+    // alt={this.state.pie.flavor}
 
     render() {
         return (
@@ -56,7 +57,7 @@ class Pie extends Component {
                     <h2> {this.state.pie.flavor} pie</h2>
                </Title>
                <ImageStyle>
-                  <img src= {this.state.pie.image} alt={this.state.pie.flavor} />
+                  <img src= {this.state.pie.image} />
                </ImageStyle>
                 <PieDescriptionStyle>
                     {this.state.pie.description}
