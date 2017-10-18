@@ -9,16 +9,22 @@ cursor: pointer;
 font-size: 15px;
 font-weight: 9px;
 color: black;
-border-radius: 5%;
+border-radius: 3px;
 text-align: center;
 background-color: rgba(250, 233, 186, 0.637);
-//margin: 20px auto;
-padding: 6px;
+padding: 0.25em 1em;
 text-decoration: none;
 a {
     text-decoration: none;
     color: black;
 }`
+
+const EditFormStyle = styled.div`
+padding-top: 40px;
+text-align: center;
+font-family: "Oxygen", sans-serif;
+
+`
 
 
 class EditForm extends Component {
@@ -76,20 +82,10 @@ handleSubmit = async (event) => {
 }
 
 
-    // Redirect to user's individual id page
-    // <Redirect push to= "/users/:id" />
-    
-        // console.log(res.data)
-
-
-// custom method to handle redirecting
-// handleRedirect = async (event) => {
-//      <Redirect to={`users/:id`} />
-// }
 
     render() {
         return (
-            <div>
+            <EditFormStyle>
                     <form onSubmit={this.handleSubmit}>
                     <div>
                         <label htmlFor="firstname">First Name</label>
@@ -108,9 +104,9 @@ handleSubmit = async (event) => {
                         <input onChange={this.handleChange} name="userName" type="text" value={this.state.updatedUser.userName} />
                     </div>
                   
-                    <Button><input type ="submit" value="Save" /></Button>
+                    <input type ="submit" value="Save" />
                     </form>
-            </div>
+            </EditFormStyle>
         );
     }
 }

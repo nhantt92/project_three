@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-
+import image from "./backgroundimage.jpg"
 
 const ButtonDecor = styled.span`
     font-family: "Bree Serif", sans-serif;
@@ -20,27 +20,38 @@ const ButtonDecor = styled.span`
     }
 `
 
-const ButtonContainter = styled.div`
-display: flex
 
-`
 const Title = styled.p`
 font-family: 'Lobster Two', cursive;
 font-size: 50px;
+padding-top: 10px;
 text-align: center;
+`
+
+const BackgroundImage = styled.div`
+background-image: (${image})
 `
 
 class HomePage extends Component {
     render() {
         return (
-            <div>
+            <BackgroundImage>
                <Title>     
                 pie shop
                 </Title>     
                
-               <ButtonContainter>
+               <div>
 
-               <ButtonDecor>
+
+           
+                {/* <img src="https://i.imgur.com/TKKDWPy.jpg" /> */}
+                
+                <p>fjdlksfjdlks</p>
+            
+
+
+
+               {/* <ButtonDecor>
                 <Link to="/signup">create an account</Link>
                 </ButtonDecor>
 
@@ -53,10 +64,10 @@ class HomePage extends Component {
                 <Link to="/signin">returning user</Link>
                 </ButtonDecor>
 
-             
+              */}
 
-                </ButtonContainter>
-            </div>
+                </div>
+                </BackgroundImage>
         );
     }
 }

@@ -11,9 +11,17 @@ padding: 10px;
 a {
   text-decoration: none;
   font-family: "Bree Serif", sans-serif;
-  color: black;
+  color: gray;
 }
 `
+
+const Pies = styled.div`
+a {color: orange;
+}
+`
+
+
+
 
 const NavBar = () => {
     return (
@@ -26,16 +34,18 @@ const NavBar = () => {
         <div>
           <Link to="/about">about</Link>  
         </div>
-        <div>
-          <Link to="/pies">pies</Link>
-          
-        </div>
+       
+         <Pies>
+           <Link to="/pies">pies</Link>
+        </Pies> 
+        
         <div>
           <Link to="/custom">custom</Link>  
         </div>
         <div>
           <Link to="/users">users</Link>  
         </div>
+        
       </NavContainer>
     )
   }

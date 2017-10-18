@@ -68,7 +68,7 @@ const ReviewsPosted = styled.div`
 font-family: "Nunito", sans-serif;
 text-align: center;
 `
-const HideShowReviewButton  = Button.extend`
+const HideShowReviewButton = Button.extend`
 
 `
 
@@ -99,7 +99,7 @@ class Pie extends Component {
             description: '',
             image: '',
             reviews: []
-        }, 
+        },
         showReviewForm: false
     }
 
@@ -110,7 +110,7 @@ class Pie extends Component {
     }
 
     toggleReviewForm = () => {
-        this.setState({showReviewForm: !this.state.showReviewForm})
+        this.setState({ showReviewForm: !this.state.showReviewForm })
     }
 
     // Use axios to get specific pie
@@ -162,13 +162,12 @@ class Pie extends Component {
                 <Button>
                     <Link to="/pies">return to pies</Link>
                 </Button>
-                <HideShowReviewButton onClick={this.toggleReviewForm}> {this.state.showReviewForm ? 'hide reviews' : 'write a review'}</HideShowReviewButton>
+             <HideShowReviewButton onClick={this.toggleReviewForm}> {this.state.showReviewForm ? 'hide reviews' : 'write a review'}</HideShowReviewButton>
 
                 <ReviewBlock>
 
                     <ReviewTitle>reviews</ReviewTitle>
 
-                    
 
                     {this.state.pie.reviews.map((review) => {
                         return (
@@ -183,11 +182,11 @@ class Pie extends Component {
                         )
                     })}
                 </ReviewBlock>
-                {/* <button onClick={this.createNewReview}>Write review</button> */}
+                
 
                 <br />
                 {this.state.showReviewForm ? <ReviewForm toggleReviewForm={this.toggleReviewForm} showReviewForm={this.state.showReviewForm} reloadPie={this.getOnePie} pieId={this.state.pie._id} /> : null}
-                
+
             </Container>
         );
     }
@@ -195,4 +194,4 @@ class Pie extends Component {
 
 export default Pie;
 
- //if state is true - show review form and if false, show null
+

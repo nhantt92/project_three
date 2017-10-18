@@ -13,20 +13,25 @@ const UserDetails = styled.div`
 `
 
 const Button = styled.button`
+cursor: pointer;
 font-family: "Bree Serif", sans-serif;
 font-size: 15px;
 font-weight: 9px;
 color: black;
-border-radius: 5%;
+border-radius: 3px;
+padding: 0.25em 1em;
+margin: 0 1em;
 text-align: center;
 background-color: rgba(250, 233, 186, 0.637);
-//margin: 20px auto;
-padding: 6px;
 text-decoration: none;
 a {
     text-decoration: none;
     color: black;
 }`
+
+const ReturnButton = Button.extend`
+background-color: tan;
+`
 
 class User extends Component {
     state ={
@@ -105,7 +110,7 @@ toggleEdit = () => {
                 <h2> username: {this.state.user.userName}</h2>
                 <Button onClick={this.toggleEdit}>edit account</Button>
                 <Button onClick={this.deleteUser}>delete user</Button>
-                <div><Link to ="/users">return to all users</Link></div>
+                <ReturnButton><Link to ="/users">return to all users</Link></ReturnButton>
                 </UserDetails>
             )
         }
