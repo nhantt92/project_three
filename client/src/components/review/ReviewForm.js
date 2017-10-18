@@ -7,6 +7,23 @@ const ReviewFormContainer = styled.div`
 font-family: "Nunito", sans-serif;
 `
 
+const PostButton = styled.button`
+font-family: "Bree Serif", sans-serif;
+font-size: 15px;
+font-weight: 9px;
+color: black;
+border-radius: 5%;
+text-align: center;
+background-color: rgba(250, 233, 186, 0.637);
+//margin: 20px auto;
+padding: 6px;
+text-decoration: none;
+a {
+    text-decoration: none;
+    color: black;
+}
+`
+
 class ReviewForm extends Component {
     state = {
         newReview: {
@@ -55,20 +72,21 @@ render() {
         return <Redirect to = {`/api/shops/pies/${pieId}`} />
     }
 return (
+    // <button onClick={this.toggleHidden}>{this.state.isHidden ? "Review" : "write a review"}</button>
     <ReviewFormContainer>
-        {/* <button onClick={ () => this.toggleHidden}>write a review</button> */}
+        
         <form onSubmit={this.handleSubmit}>
             <div>
-                <label htmlFor="title">Title:</label>
+                <label htmlFor="title">title </label>
                 <input onChange={this.handleChange} name="title" type="text" value={this.state.newReview.title} />
             </div>
             <div>
-                <label htmlFor="description">Your Thoughts:</label>
+                <label htmlFor="description">your thoughts...</label>
                 <input onChange={this.handleChange} name="description" type="text" value={this.state.newReview.description} />
             </div>
 
             
-            <button>Post</button>
+            <PostButton>post</PostButton>
         </form>
     </ReviewFormContainer>
 );

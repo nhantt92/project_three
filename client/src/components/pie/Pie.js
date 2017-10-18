@@ -16,11 +16,13 @@ font-size: 50px
 const PieDescriptionStyle = styled.div`
 display: flex;
 flex-direction: column;
-// left-margin: 30px;
-// right-margin: 30px;
+// left-margin: 50px;
+// right-margin: 15px;
+padding: 20px;
+left-padding: 30px;
 text-align: center;
 font-family: "Lobster Two", sans-serif;
- max-width: 900px;
+//  max-width: 900px;
 `
 const ImageStyle = styled.div`
 text-align : center;
@@ -36,6 +38,7 @@ const ReviewBlock = styled.div`
 `
 
 const Container = styled.div`
+text-align: center;
 border-radius: 1px;
 width: 95vw;
 max-width: 1000px;
@@ -60,12 +63,35 @@ a {
 `
 const ReviewsPosted = styled.div`
 font-family: "Nunito", sans-serif;
+text-align: center;
 `
 
 const ReviewTitle = styled.p`
+text-align: center;
 font-family: "Nunito", sans-serif;
 text-decoration: underline;
 font-size: 25px;
+`
+
+const OneReviewTitle = styled.p`
+font-weight: 30px;
+`
+
+const DeleteButton = styled.button`
+cursor: pointer;
+font-family: "Bree Serif", sans-serif;
+font-size: 15px;
+font-weight: 9px;
+color: black;
+border-radius: 5%;
+text-align: center;
+background-color: rgba(242, 219, 210, 0.637);
+padding: 2px;
+text-decoration: none;
+a {
+    text-decoration: none;
+    color: black;
+}
 `
 
 class Pie extends Component {
@@ -136,22 +162,24 @@ class Pie extends Component {
 
                 <ReviewBlock>
 
-                <ReviewTitle>Reviews</ReviewTitle>
+                <ReviewTitle>reviews</ReviewTitle>
 
                     {this.state.pie.reviews.map((review) => {
                         return (
                             <ReviewsPosted>
                                 <span key={review._id}></span>
-                                <h5>{review.title}</h5>
+                                <OneReviewTitle>{review.title}</OneReviewTitle>
                                 <p>{review.description}</p>
-                                <button onClick={() => this.deleteReview(review._id)}>delete review</button>
+                                <div>
+                                <DeleteButton onClick={() => this.deleteReview(review._id)}>delete review</DeleteButton>
+                                </div>
                             </ReviewsPosted>
                         )
                     })}
                 </ReviewBlock>
                 {/* <button onClick={this.createNewReview}>Write review</button> */}
 
-                    
+                    <br />
                 
                 <ReviewForm reloadPie={this.getOnePie} pieId={this.state.pie._id} />
                 {/* <ReviewList review={this.state.pies.reviews}  deleteReview= {this.deleteReview} /> */}
