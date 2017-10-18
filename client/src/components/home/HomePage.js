@@ -29,7 +29,10 @@ text-align: center;
 `
 
 const BackgroundImage = styled.div`
-background-image: (${image})
+height: 1000px;
+width: 1000px;
+// background-image: url(${image});
+background-image: url("https://i.imgur.com/LF9TG0f.jpg")
 `
 
 class HomePage extends Component {
@@ -44,9 +47,9 @@ class HomePage extends Component {
 
 
            
-                {/* <img src="https://i.imgur.com/TKKDWPy.jpg" /> */}
+                 {/* <img src="https://i.imgur.com/LF9TG0f.jpg" /> */}
                 
-                <p>fjdlksfjdlks</p>
+              
             
 
 

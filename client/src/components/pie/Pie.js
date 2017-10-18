@@ -15,7 +15,7 @@ margin: 20px auto;
 border: 1px solid rgba(87, 87, 87, .2);
 `
 
-const Title = styled.div`
+const Title = styled.span`
 padding: 20px;
 text-align: center;
 font-family: 'Lobster Two', cursive;
@@ -162,7 +162,7 @@ class Pie extends Component {
                 <Button>
                     <Link to="/pies">return to pies</Link>
                 </Button>
-             <HideShowReviewButton onClick={this.toggleReviewForm}> {this.state.showReviewForm ? 'hide reviews' : 'write a review'}</HideShowReviewButton>
+             <HideShowReviewButton onClick={this.toggleReviewForm}> {this.state.showReviewForm ? 'hide' : 'write a review'}</HideShowReviewButton>
 
                 <ReviewBlock>
 

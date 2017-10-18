@@ -57,12 +57,12 @@ async componentWillMount () {
 /// I will want to do this to create a custom pie
  // Create a Post for Idea
   // Create onClick that creates an empty Post
-  createNewPie = async () => {
-    const { userId } = this.props.match.params
-    const res = await axios.post(`/api/users/${userId}/pies`)
-    // console.log(res.data)
-    this.setState({user: res.data})
-  }
+//   createNewPie = async () => {
+//     const { userId } = this.props.match.params
+//     const res = await axios.post(`/api/users/${userId}/pies`)
+//     // console.log(res.data)
+//     this.setState({user: res.data})
+//   }
 
 deleteUser = async (id) => {
     // console.log(res.data)

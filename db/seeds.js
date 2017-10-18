@@ -25,7 +25,8 @@ const apple = new Pies ({
     flavor: "apple",
     price: 10,
     description: "The all-American favorite! An apple pie, regional variation apple tart, is a fruit pie, in which the principal filling ingredient is apple. It is, on occasion, served with whipped cream or ice cream on top, or alongside cheddar cheese.",
-    image: "https://i.imgur.com/IuABb8S.jpg",
+    // image: "https://i.imgur.com/IuABb8S.jpg",
+    image: "https://i.imgur.com/d0DKwo7.jpg",
     reviews: [yum, loveit]
 })
 
@@ -56,14 +57,16 @@ const chess = new Pies ({
     flavor: "chess",
     price: 10,
     description: "Chess pie is a dessert characteristic of Southern U.S. cuisine. Usually with delicate hints of lemon",
-    image: "https://i.imgur.com/5gbBZrS.jpg",
+    // image: "https://i.imgur.com/5gbBZrS.jpg",
+    image: "https://i.imgur.com/vqFfFfx.jpg",
     reviews: []
 })
 const cherry = new Pies ({
     flavor: "cherry",
     price: 10,
     description: "Cherry pie is a pie baked with a cherry filling. Traditionally, cherry pie is made with tart rather than sweet cherries. Morello cherries are one of the most common kinds of cherry used, but other varieties such as the black cherry may also be used.",
-    image: "https://i.imgur.com/94yR0Gm.jpg",
+    // image: "https://i.imgur.com/94yR0Gm.jpg",
+    image: "https://i.imgur.com/BrpggM1.jpg",
     reviews: []
 })
 
@@ -71,7 +74,8 @@ const strawberry = new Pies ({
     flavor: "strawberry",
     price: 10,
     description: "Strawberry pie is a dessert food consisting mainly of strawberries.",
-    image: "https://i.imgur.com/ROTcGBD.jpg",
+    // image: "https://i.imgur.com/ROTcGBD.jpg",
+    image: "https://i.imgur.com/bxjQ65E.jpg",
     reviews: []
 })
 
@@ -87,7 +91,8 @@ const rhubarb = new Pies ({
     flavor: "rhubarb",
     price: 10,
     description: "Rhubarb pie is a pie with a rhubarb filling. Popular in the UK, where rhubarb has been cultivated since the 1600s, its introduction to Europe from China is attributed to Marco Polo",
-    image: "https://i.imgur.com/vJZxyCI.jpg",
+    // image: "https://i.imgur.com/LO1LWbG.jpg",
+    image: "https://i.imgur.com/eliU7Ft.jpg",
     reviews: []
 })
 
@@ -95,7 +100,8 @@ const pecan = new Pies ({
     flavor: "pecan",
     price: 10,
     description: "Pecan pie is a pie of pecan nuts mixed with a filling of eggs, butter, and sugar. Variations may include white or brown sugar, sugar syrup, molasses, maple syrup, or honey.",
-    image: "https://i.imgur.com/aW5ZuT1.jpg",
+    // image: "https://i.imgur.com/aW5ZuT1.jpg",
+    image: "https://i.imgur.com/nXjCNiJ.jpg",
     reviews: []
 })
 
@@ -103,7 +109,8 @@ const keyLime = new Pies ({
     flavor: "key lime",
     price: 10,
     description: "Key lime pie is an American dessert made of Key lime juice, egg yolks, and sweetened condensed milk in a pie crust. The traditional Conch version uses the egg whites to make a meringue topping.",
-    image: "https://i.imgur.com/0gUOGp4.jpg",
+    // image: "https://i.imgur.com/0gUOGp4.jpg",
+    image: "https://i.imgur.com/zdcMZtD.jpg",
     reviews: []
 })
 
@@ -111,7 +118,8 @@ const chocolateBottom = new Pies ({
     flavor: "chocolate bottom",
     price: 10,
     description: "We make the ultimate cream pie by adding a chocolate layer to a creamy banana pie filling and topping with chocolate curls.",
-    image: "https://i.imgur.com/6aorLBn.jpg",
+    // image: "https://i.imgur.com/6aorLBn.jpg",
+    image: "https://i.imgur.com/tlaFJZp.jpg",
     reviews: []
 })
 

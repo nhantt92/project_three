@@ -50,7 +50,6 @@ class EditForm extends Component {
     //     this.handleRedirect({updatedUser: this.props.user})
     // }
 
-
 // Method to handle change to edit user
     handleChange = (event, id) => {
         // console.log(event)
