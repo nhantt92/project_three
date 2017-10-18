@@ -68,6 +68,9 @@ const ReviewsPosted = styled.div`
 font-family: "Nunito", sans-serif;
 text-align: center;
 `
+const HideShowReviewButton  = Button.extend`
+
+`
 
 const ReviewTitle = styled.p`
 text-align: center;
@@ -159,12 +162,13 @@ class Pie extends Component {
                 <Button>
                     <Link to="/pies">return to pies</Link>
                 </Button>
+                <HideShowReviewButton onClick={this.toggleReviewForm}> {this.state.showReviewForm ? 'hide reviews' : 'write a review'}</HideShowReviewButton>
 
                 <ReviewBlock>
 
                     <ReviewTitle>reviews</ReviewTitle>
 
-                    <button onClick={this.toggleReviewForm}> {this.state.showReviewForm ? 'hide review' : 'write a review'}</button>
+                    
 
                     {this.state.pie.reviews.map((review) => {
                         return (
