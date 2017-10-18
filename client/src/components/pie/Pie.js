@@ -86,7 +86,7 @@ font-weight: 30px;
 
 const DeleteButton = Button.extend`
 background-color: rgba(163, 163, 163, 0.637);
-padding: 2px;
+padding: 1px;
 `
 
 // ==============================================================================

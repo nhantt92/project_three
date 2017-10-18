@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import image from "./backgroundimage.jpg"
+import pieImage from "./background_image_pie.jpg"
 
 const ButtonDecor = styled.span`
     font-family: "Bree Serif", sans-serif;
@@ -21,35 +22,41 @@ const ButtonDecor = styled.span`
 `
 
 
-const Title = styled.p`
-font-family: 'Lobster Two', cursive;
-font-size: 50px;
-padding-top: 10px;
-text-align: center;
-`
+// const Title = styled.p`
+// font-family: 'Lobster Two', cursive;
+// font-size: 50px;
+// padding-top: 5px;
+// text-align: center;
+// `
 
-const BackgroundImage = styled.div`
-height: 1000px;
-width: 1000px;
-// background-image: url(${image});
-background-image: url("https://i.imgur.com/LF9TG0f.jpg")
-`
+ const BackgroundImage = styled.div`
+ text-align: center;
+ padding-top: 10px;
+ img{
+     position: relative;
+     width: 1200px;
+    
+     
+    
+ }
+// height: 1500px;
+// width: 1500px;
+// background-image: url(${pieImage})
+ `
 
 class HomePage extends Component {
     render() {
         return (
             <BackgroundImage>
-               <Title>     
+               {/* <Title>     
                 pie shop
-                </Title>     
+                </Title>     */}
                
-               <div>
-
-
+            
            
                  {/* <img src="https://i.imgur.com/LF9TG0f.jpg" /> */}
                 
-              
+              <img src="https://i.imgur.com/TliDwQu.jpg" />
             
 
 
@@ -69,10 +76,14 @@ class HomePage extends Component {
 
               */}
 
-                </div>
+                
                 </BackgroundImage>
         );
     }
 }
 
 export default HomePage
+
+
+/// // background-image: url(${image});
+//background-image: url("https://i.imgur.com/LF9TG0f.jpg")
