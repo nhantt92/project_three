@@ -75,6 +75,14 @@ const strawberry = new Pies ({
     reviews: []
 })
 
+const frenchSilk = new Pies ({
+    flavor: "french silk",
+    price: 11,
+    description: "French Silk Pie is chocolate lovers dream.  Flaky and buttery homemade pie crust with rich and silky chocolate filling , piled high with whipped cream and lots of chocolate shavings on top. If you are chocolate addicts, you must make this pie.",
+    image: "https://i.imgur.com/eBi02hO.jpg",
+    reviews: []
+})
+
 const rhubarb = new Pies ({
     flavor: "rhubarb",
     price: 10,
@@ -99,12 +107,20 @@ const keyLime = new Pies ({
     reviews: []
 })
 
+const chocolateBottom = new Pies ({
+    flavor: "chocolate bottom",
+    price: 10,
+    description: "We make the ultimate cream pie by adding a chocolate layer to a creamy banana pie filling and topping with chocolate curls.",
+    image: "https://i.imgur.com/6aorLBn.jpg",
+    reviews: []
+})
+
 // SHOP
 
 const pieShop = new Shop ({
     name: "cabinet",
     yearEstablished: 2017,
-    pies: [apple, blueberry, pumpkin, bananaCream, chess, cherry, strawberry, rhubarb, pecan, keyLime]
+    pies: [apple, blueberry, pumpkin, bananaCream, chess, cherry, strawberry, frenchSilk, rhubarb, pecan, keyLime, chocolateBottom]
 })
 
 /// USERS 
