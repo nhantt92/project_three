@@ -97,7 +97,7 @@ class Pie extends Component {
             image: '',
             reviews: []
         }, 
-        showReviewForm: true
+        showReviewForm: false
     }
 
 
@@ -182,8 +182,8 @@ class Pie extends Component {
                 {/* <button onClick={this.createNewReview}>Write review</button> */}
 
                 <br />
-                <ReviewForm toggleReviewForm={this.toggleReviewForm} showReviewForm={this.state.showReviewForm} reloadPie={this.getOnePie} pieId={this.state.pie._id} />
-                {/* <ReviewList review={this.state.pies.reviews}  deleteReview= {this.deleteReview} /> */}
+                {this.state.showReviewForm ? <ReviewForm toggleReviewForm={this.toggleReviewForm} showReviewForm={this.state.showReviewForm} reloadPie={this.getOnePie} pieId={this.state.pie._id} /> : null}
+                
             </Container>
         );
     }

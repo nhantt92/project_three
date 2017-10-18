@@ -70,7 +70,7 @@ render() {
 return (
     
     <ReviewFormContainer>
-        <button onClick={this.props.toggleReviewForm}> {this.props.showReviewForm ? 'hide' : 'write a review'}</button>        
+        <button onClick={this.props.toggleReviewForm}> {this.props.showReviewForm ? 'write a review' : 'hide'}</button>        
         <form onSubmit={this.handleSubmit}>
             <div>
                 {/* <label htmlFor="title">title </label> */}
