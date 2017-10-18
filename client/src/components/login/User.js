@@ -12,6 +12,22 @@ const UserDetails = styled.div`
     font-family: "Oxygen", sans-serif;
 `
 
+const Button = styled.button`
+font-family: "Bree Serif", sans-serif;
+font-size: 15px;
+font-weight: 9px;
+color: black;
+border-radius: 5%;
+text-align: center;
+background-color: rgba(250, 233, 186, 0.637);
+//margin: 20px auto;
+padding: 6px;
+text-decoration: none;
+a {
+    text-decoration: none;
+    color: black;
+}`
+
 class User extends Component {
     state ={
         user: {
@@ -87,10 +103,9 @@ toggleEdit = () => {
               <h1>{this.state.user.firstName} {this.state.user.lastName}'s account</h1>
                 <h2>{this.state.user.email}</h2>
                 <h2> username: {this.state.user.userName}</h2>
-                <button onClick={this.toggleEdit}>edit account</button>
-                <button onClick={this.deleteUser}>delete user</button>
-                <div><Link to ="/users">return to all users</Link>
-                </div>
+                <Button onClick={this.toggleEdit}>edit account</Button>
+                <Button onClick={this.deleteUser}>delete user</Button>
+                <div><Link to ="/users">return to all users</Link></div>
                 </UserDetails>
             )
         }

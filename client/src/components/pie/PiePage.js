@@ -5,10 +5,10 @@ import { Link } from 'react-router-dom'
 
 const PiePageContainer = styled.div`
 background-color: white;
-border-radius: 2px;
+border-radius: 5px;
 max-width: 1000px;
 margin: 20px auto;
-border: 1px solid grey;
+border: 1px solid rgba(87, 87, 87, .2);
 `
 
 const Title = styled.h1`
@@ -34,6 +34,9 @@ img{
     max-width: 200px; 
   }
   `
+const SpacerDiv = styled.div`
+height: 200px;
+`
 
 class PiePage extends Component {
       state={
@@ -71,9 +74,10 @@ class PiePage extends Component {
                         <PieImage>
                         <img src={pie.image}/> 
                         </PieImage>
-              
-              
               </Link> 
+
+             <SpacerDiv></SpacerDiv>
+
               </PieContainer> 
                         
                     )

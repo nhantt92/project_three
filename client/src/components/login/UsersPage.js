@@ -10,7 +10,6 @@ text-align: center;
 `
 const UsersList = styled.div`
 font-family: "Oxygen", sans-serif;
-
 a { 
  text-decoration: none;
     color: black;

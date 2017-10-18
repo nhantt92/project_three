@@ -77,12 +77,12 @@ return (
         
         <form onSubmit={this.handleSubmit}>
             <div>
-                <label htmlFor="title">title </label>
-                <input onChange={this.handleChange} name="title" type="text" value={this.state.newReview.title} />
+                {/* <label htmlFor="title">title </label> */}
+                <input onChange={this.handleChange} placeholder="title" name="title" type="text" value={this.state.newReview.title} />
             </div>
             <div>
-                <label htmlFor="description">your thoughts...</label>
-                <input onChange={this.handleChange} name="description" type="text" value={this.state.newReview.description} />
+                {/* <label htmlFor="description">your thoughts...</label> */}
+                <input onChange={this.handleChange} placeholder="my thoughts..."name="description" type="text" value={this.state.newReview.description} />
             </div>
 
             

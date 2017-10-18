@@ -6,6 +6,15 @@ import ReviewPage from '../review/ReviewPage'
 // import ReviewList from '../review/ReviewList'
 import ReviewForm from '../review/ReviewForm'
 
+const Container = styled.div`
+text-align: center;
+border-radius: 5px;
+width: 95vw;
+max-width: 1000px;
+margin: 20px auto;
+border: 1px solid rgba(87, 87, 87, .2);
+`
+
 const Title = styled.div`
 padding: 20px;
 text-align: center;
@@ -37,14 +46,7 @@ const ReviewBlock = styled.div`
   text-align: left;
 `
 
-const Container = styled.div`
-text-align: center;
-border-radius: 1px;
-width: 95vw;
-max-width: 1000px;
-margin: 20px auto;
-border: 1px solid #e6e6e6;
-`
+
 const ReturnToMain = styled.button`
 font-family: "Bree Serif", sans-serif;
 font-size: 15px;
