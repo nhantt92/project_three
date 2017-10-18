@@ -7,19 +7,21 @@ import ReviewPage from '../review/ReviewPage'
 import ReviewForm from '../review/ReviewForm'
 
 const Title = styled.div`
-// margin: -1;
+padding: 20px;
 text-align: center;
 font-family: 'Lobster Two', cursive;
 text-decoration: underline;
 font-size: 50px
 `
 const PieDescriptionStyle = styled.div`
-displayL flex;
+display: flex;
+flex-direction: column;
+// left-margin: 30px;
+// right-margin: 30px;
 text-align: center;
 font-family: "Lobster Two", sans-serif;
-max-width: 300px;
+ max-width: 900px;
 `
-
 const ImageStyle = styled.div`
 text-align : center;
 img {
@@ -39,6 +41,23 @@ width: 95vw;
 max-width: 1000px;
 margin: 20px auto;
 border: 1px solid #e6e6e6;
+`
+const ReturnToMain = styled.button`
+font-family: "Bree Serif", sans-serif;
+font-size: 15px;
+font-weight: 9px;
+color: black;
+border-radius: 5%;
+text-align: center;
+background-color: rgba(250, 233, 186, 0.637);
+//margin: 20px auto;
+padding: 6px;
+text-decoration: none;
+a {
+    text-decoration: none;
+    color: black;
+}
+
 `
 
 class Pie extends Component {
@@ -92,16 +111,16 @@ class Pie extends Component {
         return (
             <Container>
                 <Title>
-                    <h2> {this.state.pie.flavor} pie</h2>
+                    {this.state.pie.flavor} pie
                 </Title>
                 <ImageStyle>
                     <img src={this.state.pie.image} />
                 </ImageStyle>
                 <PieDescriptionStyle>
-                    <p>{this.state.pie.description}</p>
+                    {this.state.pie.description}
                     <p>$ {this.state.pie.price}</p>
                 </PieDescriptionStyle>
-
+                
 
                 <ReviewBlock>
                     {this.state.pie.reviews.map((review) => {
@@ -117,8 +136,10 @@ class Pie extends Component {
                 </ReviewBlock>
                 {/* <button onClick={this.createNewReview}>Write review</button> */}
 
-
-                <Link to="/pies">return to pies</Link>
+                    <ReturnToMain>
+                    <Link to="/pies">return to pies</Link>
+                    </ReturnToMain>
+                
                 <ReviewForm reloadPie={this.getOnePie} pieId={this.state.pie._id} />
                 {/* <ReviewList review={this.state.pies.reviews}  deleteReview= {this.deleteReview} /> */}
             </Container>
