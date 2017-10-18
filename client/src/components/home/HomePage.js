@@ -56,7 +56,7 @@ class HomePage extends Component {
            
                  {/* <img src="https://i.imgur.com/LF9TG0f.jpg" /> */}
                 
-              <img src="https://i.imgur.com/TliDwQu.jpg" />
+           <Link to="/pies">   <img src="https://i.imgur.com/TliDwQu.jpg" /> </Link>
             
 
 
