@@ -10,6 +10,14 @@ text-align: center;
 `
 const UsersList = styled.div`
 font-family: "Oxygen", sans-serif;
+
+a { 
+ text-decoration: none;
+    color: black;
+}
+`
+const UserListHeader = styled.div`
+text-align: center;
 `
 
 class UsersPage extends Component {
@@ -38,10 +46,11 @@ class UsersPage extends Component {
         return (
             <UsersList>
                 
+                <UserListHeader>
                 <h2>Returning User?</h2>
                 <h3>Select your name from the list below</h3>
+                </UserListHeader>
                 {this.state.users.map(user => {
-
                     return (
                     <Users><Link 
                     key={user._id} 

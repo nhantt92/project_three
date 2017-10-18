@@ -146,23 +146,23 @@ class Pie extends Component {
             <Container>
                 <Title>
                     {this.state.pie.flavor} pie
-                </Title>
+        </Title>
                 <ImageStyle>
                     <img src={this.state.pie.image} />
                 </ImageStyle>
                 <PieDescriptionStyle>
                     {this.state.pie.description}
                     <p>$ {this.state.pie.price}</p>
-                
+
 
                 </PieDescriptionStyle>
                 <ReturnToMain>
                     <Link to="/pies">return to pies</Link>
-                    </ReturnToMain>
+                </ReturnToMain>
 
                 <ReviewBlock>
 
-                <ReviewTitle>reviews</ReviewTitle>
+                    <ReviewTitle>reviews</ReviewTitle>
 
                     {this.state.pie.reviews.map((review) => {
                         return (
@@ -171,7 +171,7 @@ class Pie extends Component {
                                 <OneReviewTitle>{review.title}</OneReviewTitle>
                                 <p>{review.description}</p>
                                 <div>
-                                <DeleteButton onClick={() => this.deleteReview(review._id)}>delete review</DeleteButton>
+                                    <DeleteButton onClick={() => this.deleteReview(review._id)}>delete review</DeleteButton>
                                 </div>
                             </ReviewsPosted>
                         )
@@ -179,8 +179,8 @@ class Pie extends Component {
                 </ReviewBlock>
                 {/* <button onClick={this.createNewReview}>Write review</button> */}
 
-                    <br />
-                
+                <br />
+
                 <ReviewForm reloadPie={this.getOnePie} pieId={this.state.pie._id} />
                 {/* <ReviewList review={this.state.pies.reviews}  deleteReview= {this.deleteReview} /> */}
             </Container>

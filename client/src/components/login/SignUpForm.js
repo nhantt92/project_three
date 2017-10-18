@@ -1,7 +1,14 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom'
-
+import styled from 'styled-components'
 import axios from 'axios'
+
+const SignUpFormContainer = styled.div`
+text-align: center;
+padding: 10px;
+margin: 0 auto
+`
+
 
 class SignUpForm extends Component {
     state = {
@@ -10,7 +17,6 @@ class SignUpForm extends Component {
             lastName: '',
             email: '',
             userName: ''
-            
         }, 
         redirectToUsersPage: false,
         newUserId: ''
@@ -53,28 +59,28 @@ class SignUpForm extends Component {
             return <Redirect to={`users/${this.state.newUserId}`} />
         }
         return (
-            <div>
+            <SignUpFormContainer>
                 <h1>Sign-Up</h1>
                 <form onSubmit={this.handleSubmit}>
                     <div>
-                        <label htmlFor="firstname">First Name</label>
-                        <input onChange={this.handleChange} name="firstName" type="text" value={this.state.newUser.firstName} />
+                        {/* <label htmlFor="firstname"></label> */}
+                        <input onChange={this.handleChange} name="firstName" placeholder="first name" type="text" value={this.state.newUser.firstName} />
                     </div>
                     <div>
-                        <label htmlFor="lastName">Last Name</label>
-                        <input onChange={this.handleChange} name="lastName" type="text" value={this.state.newUser.lastName} />
+                        {/* <label htmlFor="lastName">Last Name</label> */}
+                        <input onChange={this.handleChange} name="lastName" placeholder= "last name" type="text" value={this.state.newUser.lastName} />
                     </div>
                     <div>
-                        <label htmlFor="email">Email Address</label>
-                        <input onChange={this.handleChange} name="email" type="text" value={this.state.newUser.email} />
+                        {/* <label htmlFor="email">Email Address</label> */}
+                        <input onChange={this.handleChange} name="email" placeholder= "email" type="text" value={this.state.newUser.email} />
                     </div>
                     <div>
-                        <label htmlFor="userName">Username</label>
-                        <input onChange={this.handleChange} name="userName" type="text" value={this.state.newUser.userName} />
+                        {/* <label htmlFor="userName">Username</label> */}
+                        <input onChange={this.handleChange} name="userName" placeholder= "username" type="text" value={this.state.newUser.userName} />
                     </div>
                     <button>Create</button>
                 </form>
-            </div>
+            </SignUpFormContainer>
         );
     }
 }

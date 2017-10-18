@@ -3,7 +3,14 @@ import axios from 'axios'
 // import UsersPage from './UsersPage'
 import { Link, Redirect } from 'react-router-dom'
 import EditForm from './EditForm'
+import styled from 'styled-components'
 // import Toggle from 'react-toggle'
+
+const UserDetails = styled.div`
+    padding: 50px;
+    text-align: center;
+    font-family: "Oxygen", sans-serif;
+`
 
 class User extends Component {
     state ={
@@ -76,16 +83,15 @@ toggleEdit = () => {
         if (!this.state.editUserDetails) {
             return (
         
-             <div>
-              <h1>{this.state.user.firstName} {this.state.user.lastName}'s Account</h1>
+             <UserDetails>
+              <h1>{this.state.user.firstName} {this.state.user.lastName}'s account</h1>
                 <h2>{this.state.user.email}</h2>
                 <h2> username: {this.state.user.userName}</h2>
-            
-               
-                <button onClick={this.toggleEdit}>Edit Account</button>
-                <button onClick={this.deleteUser}>Delete User</button>
-                <Link to ="/users">return to all users</Link>
+                <button onClick={this.toggleEdit}>edit account</button>
+                <button onClick={this.deleteUser}>delete user</button>
+                <div><Link to ="/users">return to all users</Link>
                 </div>
+                </UserDetails>
             )
         }
 
