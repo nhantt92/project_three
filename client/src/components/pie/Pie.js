@@ -164,7 +164,7 @@ class Pie extends Component {
 
                     <ReviewTitle>reviews</ReviewTitle>
 
-                    {/* <button onClick={this.toggleReviewForm}> write a review </button> */}
+                    <button onClick={this.toggleReviewForm}> {this.state.showReviewForm ? 'hide review' : 'write a review'}</button>
 
                     {this.state.pie.reviews.map((review) => {
                         return (

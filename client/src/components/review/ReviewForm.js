@@ -27,6 +27,7 @@ a {
 
 class ReviewForm extends Component {
     state = {
+        // showReviewForm: true,
         newReview: {
             title: '',
             description: ''
@@ -68,9 +69,10 @@ render() {
         return <Redirect to = {`/api/shops/pies/${pieId}`} />
     }
 return (
-    
+    <div>
+    {/* <button onClick={this.props.toggleReviewForm}> {this.props.showReviewForm ? 'hide' : 'write a review'}</button> */}
     <ReviewFormContainer>
-        <button onClick={this.props.toggleReviewForm}> {this.props.showReviewForm ? 'write a review' : 'hide'}</button>        
+                
         <form onSubmit={this.handleSubmit}>
             <div>
                 {/* <label htmlFor="title">title </label> */}
@@ -87,6 +89,7 @@ return (
      
         </form>
     </ReviewFormContainer>
+    </div>
 );
 }
 }
