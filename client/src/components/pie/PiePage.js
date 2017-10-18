@@ -32,11 +32,14 @@ margin-left: 30px;
 margin-right: 20px;
 img{
     max-width: 200px; 
+    border-radius: 5px;
   }
   `
 const SpacerDiv = styled.div`
 height: 200px;
 `
+
+// ==============================================================================
 
 class PiePage extends Component {
       state={

@@ -34,9 +34,11 @@ font-family: "Lobster Two", sans-serif;
 //  max-width: 900px;
 `
 const ImageStyle = styled.div`
+
 text-align : center;
 img {
 max-width: 400px;
+border-radius: 6px;
 }
 // max-height: 200px;
 // margin: 0 auto;
@@ -46,9 +48,9 @@ const ReviewBlock = styled.div`
   text-align: left;
 `
 
-
-const ReturnToMain = styled.button`
+const Button = styled.button`
 font-family: "Bree Serif", sans-serif;
+cursor: pointer;
 font-size: 15px;
 font-weight: 9px;
 color: black;
@@ -61,8 +63,7 @@ text-decoration: none;
 a {
     text-decoration: none;
     color: black;
-}
-`
+}`
 const ReviewsPosted = styled.div`
 font-family: "Nunito", sans-serif;
 text-align: center;
@@ -79,22 +80,13 @@ const OneReviewTitle = styled.p`
 font-weight: 30px;
 `
 
-const DeleteButton = styled.button`
-cursor: pointer;
-font-family: "Bree Serif", sans-serif;
-font-size: 15px;
-font-weight: 9px;
-color: black;
-border-radius: 5%;
-text-align: center;
-background-color: rgba(242, 219, 210, 0.637);
+
+const DeleteButton = Button.extend`
+background-color: rgba(163, 163, 163, 0.637);
 padding: 2px;
-text-decoration: none;
-a {
-    text-decoration: none;
-    color: black;
-}
 `
+
+// ==============================================================================
 
 class Pie extends Component {
     state = {
@@ -104,12 +96,18 @@ class Pie extends Component {
             description: '',
             image: '',
             reviews: []
-        }
+        }, 
+        showReviewForm: true
     }
+
 
     // call to get one pie
     componentWillMount() {
         this.getOnePie()
+    }
+
+    toggleReviewForm = () => {
+        this.setState({showReviewForm: !this.state.showReviewForm})
     }
 
     // Use axios to get specific pie
@@ -158,13 +156,15 @@ class Pie extends Component {
 
 
                 </PieDescriptionStyle>
-                <ReturnToMain>
+                <Button>
                     <Link to="/pies">return to pies</Link>
-                </ReturnToMain>
+                </Button>
 
                 <ReviewBlock>
 
                     <ReviewTitle>reviews</ReviewTitle>
+
+                    {/* <button onClick={this.toggleReviewForm}> write a review </button> */}
 
                     {this.state.pie.reviews.map((review) => {
                         return (
@@ -182,8 +182,7 @@ class Pie extends Component {
                 {/* <button onClick={this.createNewReview}>Write review</button> */}
 
                 <br />
-
-                <ReviewForm reloadPie={this.getOnePie} pieId={this.state.pie._id} />
+                <ReviewForm toggleReviewForm={this.toggleReviewForm} showReviewForm={this.state.showReviewForm} reloadPie={this.getOnePie} pieId={this.state.pie._id} />
                 {/* <ReviewList review={this.state.pies.reviews}  deleteReview= {this.deleteReview} /> */}
             </Container>
         );
@@ -191,3 +190,5 @@ class Pie extends Component {
 }
 
 export default Pie;
+
+ //if state is true - show review form and if false, show null
