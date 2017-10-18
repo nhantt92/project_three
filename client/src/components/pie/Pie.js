@@ -57,7 +57,15 @@ a {
     text-decoration: none;
     color: black;
 }
+`
+const ReviewsPosted = styled.div`
+font-family: "Nunito", sans-serif;
+`
 
+const ReviewTitle = styled.p`
+font-family: "Nunito", sans-serif;
+text-decoration: underline;
+font-size: 25px;
 `
 
 class Pie extends Component {
@@ -119,26 +127,31 @@ class Pie extends Component {
                 <PieDescriptionStyle>
                     {this.state.pie.description}
                     <p>$ {this.state.pie.price}</p>
-                </PieDescriptionStyle>
                 
 
+                </PieDescriptionStyle>
+                <ReturnToMain>
+                    <Link to="/pies">return to pies</Link>
+                    </ReturnToMain>
+
                 <ReviewBlock>
+
+                <ReviewTitle>Reviews</ReviewTitle>
+
                     {this.state.pie.reviews.map((review) => {
                         return (
-                            <div>
+                            <ReviewsPosted>
                                 <span key={review._id}></span>
                                 <h5>{review.title}</h5>
                                 <p>{review.description}</p>
                                 <button onClick={() => this.deleteReview(review._id)}>delete review</button>
-                            </div>
+                            </ReviewsPosted>
                         )
                     })}
                 </ReviewBlock>
                 {/* <button onClick={this.createNewReview}>Write review</button> */}
 
-                    <ReturnToMain>
-                    <Link to="/pies">return to pies</Link>
-                    </ReturnToMain>
+                    
                 
                 <ReviewForm reloadPie={this.getOnePie} pieId={this.state.pie._id} />
                 {/* <ReviewList review={this.state.pies.reviews}  deleteReview= {this.deleteReview} /> */}

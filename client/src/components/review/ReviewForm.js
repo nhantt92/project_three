@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import { Link, Redirect } from 'react-router-dom'
+import styled from 'styled-components'
+
+const ReviewFormContainer = styled.div`
+font-family: "Nunito", sans-serif;
+`
 
 class ReviewForm extends Component {
     state = {
@@ -9,9 +14,13 @@ class ReviewForm extends Component {
             description: ''
         }, 
         redirectToPiePage: false,
+        isHidden: true,
         newReviewId: ''
     }
 
+    toggleHidden = async (event) => {
+        this.setState({isHidden: !this.state.isHidden})
+    }
 
     handleChange = (event) => {
 
@@ -39,26 +48,29 @@ class ReviewForm extends Component {
 
 
 render() {
+    
+    
     if (this.state.redirectorToPiePage) {
         const { pieId } = this.props.pieId
         return <Redirect to = {`/api/shops/pies/${pieId}`} />
     }
 return (
-    <div>
+    <ReviewFormContainer>
+        {/* <button onClick={ () => this.toggleHidden}>write a review</button> */}
         <form onSubmit={this.handleSubmit}>
             <div>
-                <label htmlFor="title">Title</label>
+                <label htmlFor="title">Title:</label>
                 <input onChange={this.handleChange} name="title" type="text" value={this.state.newReview.title} />
             </div>
             <div>
-                <label htmlFor="description">Description</label>
+                <label htmlFor="description">Your Thoughts:</label>
                 <input onChange={this.handleChange} name="description" type="text" value={this.state.newReview.description} />
             </div>
 
             
-            <button>Create</button>
+            <button>Post</button>
         </form>
-    </div>
+    </ReviewFormContainer>
 );
 }
 }
