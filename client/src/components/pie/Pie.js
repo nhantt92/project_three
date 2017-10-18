@@ -14,6 +14,7 @@ text-decoration: underline;
 font-size: 50px
 `
 const PieDescriptionStyle = styled.div`
+displayL flex;
 text-align: center;
 font-family: "Lobster Two", sans-serif;
 max-width: 300px;

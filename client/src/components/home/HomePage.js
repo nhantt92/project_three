@@ -4,7 +4,9 @@ import { Link } from 'react-router-dom'
 
 
 const ButtonDecor = styled.span`
-    font-family: "News Cycle", sans-serif;
+    font-family: "Bree Serif", sans-serif;
+    font-size: 15px;
+    font-weight: 9px;
     color: black;
     border-radius: 5%;
     text-align: center;
