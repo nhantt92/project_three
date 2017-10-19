@@ -43,3 +43,13 @@ So many buttons! Many of which all have the same styling, so breaking the repeat
 3. Hide the word "Reviews" until the user hits "hide/show review form"
 4. Hide and show the Signup form upon the user asking for it. 
 5. Have the users add "custom" pies to their cart.
+
+
+<br />
+
+<img src="/images/homepage.png" width="400">
+<img src="/images/ourpies.png" width="400">
+<img src="/images/aboutus.png" width="400">
+<img src="/images/returning_new_users.png" width="400">
+
+
