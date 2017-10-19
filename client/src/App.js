@@ -13,6 +13,7 @@ import About from './components/home/About'
 import EditForm from './components/login/EditForm'
 import Pie from './components/pie/Pie'
 import Footer from './components/Footer'
+import Custom from './components/home/Custom'
 
 
 class App extends Component {
@@ -31,6 +32,7 @@ class App extends Component {
           <Route exact path = "/about" component ={About} />
           <Route exact path = "/users/:id/editform" component= {EditForm} />
           <Route exact path = "/pies/:pieId" component = {Pie} />
+          <Route exact path ="/custom" component ={Custom} />>
         </Switch>
         {/* <Footer /> */}
         </div>

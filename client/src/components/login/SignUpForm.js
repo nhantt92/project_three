@@ -9,16 +9,15 @@ padding: 10px;
 margin: 0 auto
 `
 const SignUpCreate = styled.button`
-font-family: "Bree Serif", sans-serif;
+font-family: "nunito", sans-serif;
 cursor: pointer;
 font-size: 15px;
 font-weight: 9px;
 color: black;
-border-radius: 5%;
+border-radius: 3px;
 text-align: center;
 background-color: rgba(250, 233, 186, 0.637);
-//margin: 20px auto;
-padding: 6px;
+padding: 0.25em 1em;
 text-decoration: none;
 a {
     text-decoration: none;
@@ -94,7 +93,7 @@ class SignUpForm extends Component {
                         {/* <label htmlFor="userName">Username</label> */}
                         <input onChange={this.handleChange} name="userName" placeholder= "username" type="text" value={this.state.newUser.userName} />
                     </div>
-                    <SignUpCreate>Create</SignUpCreate>
+                    <SignUpCreate>create</SignUpCreate>
                 </form>
             </SignUpFormContainer>
         );

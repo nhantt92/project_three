@@ -4,7 +4,7 @@ import axios from 'axios'
 import styled from 'styled-components';
 
 const Button = styled.button`
-font-family: "Bree Serif", sans-serif;
+font-family: "nunito", sans-serif;
 cursor: pointer;
 font-size: 15px;
 font-weight: 9px;
@@ -87,19 +87,19 @@ handleSubmit = async (event) => {
             <EditFormStyle>
                     <form onSubmit={this.handleSubmit}>
                     <div>
-                        <label htmlFor="firstname">First Name</label>
+                        <label htmlFor="firstname">first name: </label>
                         <input onChange={this.handleChange} name="firstName" type="text" value={this.state.updatedUser.firstName} />
                     </div>
                     <div>
-                        <label htmlFor="lastName">Last Name</label>
+                        <label htmlFor="lastName">last name: </label>
                         <input onChange={this.handleChange} name="lastName" type="text" value={this.state.updatedUser.lastName} />
                     </div>
                     <div>
-                        <label htmlFor="email">Email Address</label>
+                        <label htmlFor="email">email address: </label>
                         <input onChange={this.handleChange} name="email" type="text" value={this.state.updatedUser.email} />
                     </div>
                     <div>
-                        <label htmlFor="updatedUserName">Username</label>
+                        <label htmlFor="updatedUserName">username: </label>
                         <input onChange={this.handleChange} name="userName" type="text" value={this.state.updatedUser.userName} />
                     </div>
                   

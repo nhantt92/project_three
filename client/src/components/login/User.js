@@ -13,22 +13,20 @@ const UserDetails = styled.div`
 `
 
 const Button = styled.button`
+font-family: "nunito", sans-serif;
 cursor: pointer;
-font-family: "Bree Serif", sans-serif;
 font-size: 15px;
 font-weight: 9px;
 color: black;
 border-radius: 3px;
-padding: 0.25em 1em;
-margin: 0 1em;
 text-align: center;
 background-color: rgba(250, 233, 186, 0.637);
+padding: 0.25em 1em;
 text-decoration: none;
 a {
     text-decoration: none;
     color: black;
 }`
-
 const ReturnButton = Button.extend`
 background-color: tan;
 `

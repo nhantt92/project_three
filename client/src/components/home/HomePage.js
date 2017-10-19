@@ -31,7 +31,7 @@ const ButtonDecor = styled.span`
 
  const BackgroundImage = styled.div`
  text-align: center;
- padding-top: 10px;
+ padding-top: 1px;
  img{
      position: relative;
      width: 1200px;

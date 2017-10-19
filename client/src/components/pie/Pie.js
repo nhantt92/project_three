@@ -49,7 +49,7 @@ const ReviewBlock = styled.div`
 `
 
 const Button = styled.button`
-font-family: "Bree Serif", sans-serif;
+font-family: "nunito", sans-serif;
 cursor: pointer;
 font-size: 15px;
 font-weight: 9px;
