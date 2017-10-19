@@ -1,16 +1,35 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import slice from './pie_slice.jpg'
+import sliced from './sliced.jpg'
 
-const PieSlice = styled.div`
-display: block;
- text-align: center;
-padding-top: 50px;
-padding-left: 60px;
-padding-right: 40px;
-img {
+// const PieSlice = styled.div`
+// display: block;
+//  text-align: center;
+// padding-top: 50px;
+// padding-left: 60px;
+// padding-right: 40px;
+// img {
+//     position: relative;
+//     max-width: 600px;
+//     border-radius: 3px;
+// }
+// `
+
+const Slice = styled.div`
+//  height: 3000px;
+//  width: 1000px;
+
+background-image: url(${slice})
+`
+
+const Sliced = styled.div`
+text-align: center;
+padding-top: 20px;
+padding-bottom: 20px;
+img{
     position: relative;
-    max-width: 600px;
-    border-radius: 3px;
+    width: 600px;
 }
 `
 
@@ -20,10 +39,14 @@ class About extends Component {
     render() {
         return (
             <div>
-                <PieSlice>
+                {/* <PieSlice>
                 <img src="https://i.imgur.com/hQNst5k.jpg" />
 
-                </PieSlice>
+                </PieSlice> */}
+
+              <Sliced><img src="https://i.imgur.com/Tey9eTH.jpg" /></Sliced>
+                
+               
                 
             </div>
         );

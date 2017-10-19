@@ -51,7 +51,7 @@ const bananaCream = new Pies ({
     price: 10,
     description: "A cream pie is a type of pie or cake filled with a rich custard or pudding that is made from milk, cream, flour, and eggs.",
     image: "https://i.imgur.com/HHKQIhe.jpg",
-    reviews: []
+    reviews: [yum, loveit]
 })
 const chess = new Pies ({
     flavor: "chess",
@@ -76,7 +76,7 @@ const strawberry = new Pies ({
     description: "Strawberry pie is a dessert food consisting mainly of strawberries.",
     // image: "https://i.imgur.com/ROTcGBD.jpg",
     image: "https://i.imgur.com/bxjQ65E.jpg",
-    reviews: []
+    reviews: [yum]
 })
 
 const frenchSilk = new Pies ({
@@ -84,7 +84,7 @@ const frenchSilk = new Pies ({
     price: 11,
     description: "French Silk Pie is chocolate lovers dream.  Flaky and buttery homemade pie crust with rich and silky chocolate filling , piled high with whipped cream and lots of chocolate shavings on top. If you are chocolate addicts, you must make this pie.",
     image: "https://i.imgur.com/eBi02hO.jpg",
-    reviews: []
+    reviews: [loveit]
 })
 
 const rhubarb = new Pies ({
