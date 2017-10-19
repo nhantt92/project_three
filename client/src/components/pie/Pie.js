@@ -15,8 +15,9 @@ margin: 20px auto;
 border: 1px solid rgba(87, 87, 87, .2);
 `
 
-const Title = styled.span`
-padding: 20px;
+const Title = styled.div`
+padding-top: 10px;
+padding-bottom: 15px;
 text-align: center;
 font-family: 'Lobster Two', cursive;
 text-decoration: underline;
@@ -85,7 +86,7 @@ font-weight: 30px;
 
 
 const DeleteButton = Button.extend`
-background-color: rgba(87, 55, 0, 0.2);
+background-color: rgba(250, 233, 186, 0.2);
 padding: 1px;
 `
 
