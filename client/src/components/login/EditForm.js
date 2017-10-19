@@ -3,7 +3,7 @@ import axios from 'axios'
 // import { Redirect } from 'react-router-dom'
 import styled from 'styled-components';
 
-const Button = styled.button`
+const Input = styled.input`
 font-family: "nunito", sans-serif;
 cursor: pointer;
 font-size: 15px;
@@ -11,7 +11,7 @@ font-weight: 9px;
 color: black;
 border-radius: 3px;
 text-align: center;
-background-color: rgba(250, 233, 186, 0.637);
+background-color: rgba(250, 233, 186, 0.2);
 padding: 0.25em 1em;
 text-decoration: none;
 a {
@@ -85,6 +85,11 @@ handleSubmit = async (event) => {
     render() {
         return (
             <EditFormStyle>
+
+                    <div>edting account</div>
+                    <br />
+                    <br />
+
                     <form onSubmit={this.handleSubmit}>
                     <div>
                         <label htmlFor="firstname">first name: </label>
@@ -102,8 +107,11 @@ handleSubmit = async (event) => {
                         <label htmlFor="updatedUserName">username: </label>
                         <input onChange={this.handleChange} name="userName" type="text" value={this.state.updatedUser.userName} />
                     </div>
-                  
-                    <input type ="submit" value="Save" />
+                  <br />
+                  <div>
+                  <Input type ="submit" value="save changes" />
+                  </div>
+                   
                     </form>
             </EditFormStyle>
         );

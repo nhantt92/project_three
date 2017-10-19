@@ -9,7 +9,7 @@ import styled from 'styled-components'
 const UserDetails = styled.div`
     padding: 50px;
     text-align: center;
-    font-family: "Oxygen", sans-serif;
+    font-family: "muli", sans-serif;
 `
 
 const Button = styled.button`
