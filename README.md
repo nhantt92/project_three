@@ -47,9 +47,9 @@ So many buttons! Many of which all have the same styling, so breaking the repeat
 
 <br />
 
-<img src="/images/homepage.png" width="400">
-<img src="/images/ourpies.png" width="400">
-<img src="/images/aboutus.png" width="400">
-<img src="/images/returning_new_users.png" width="400">
+<img src="/images/homepage.png" width="450">
+<img src="/images/ourpies.png" width="450">
+<img src="/images/aboutus.png" width="450">
+<img src="/images/returning_new_users.png" width="450">
 
 
