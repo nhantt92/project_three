@@ -56,7 +56,7 @@ font-weight: 9px;
 color: black;
 border-radius: 5%;
 text-align: center;
-background-color: rgba(250, 233, 186, 0.637);
+background-color: rgba(250, 233, 186, 0.2);
 //margin: 20px auto;
 padding: 6px;
 text-decoration: none;
@@ -85,7 +85,7 @@ font-weight: 30px;
 
 
 const DeleteButton = Button.extend`
-background-color: rgba(163, 163, 163, 0.637);
+background-color: rgba(87, 55, 0, 0.2);
 padding: 1px;
 `
 

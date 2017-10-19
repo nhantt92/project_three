@@ -20,7 +20,8 @@ font-weight: 9px;
 color: black;
 border-radius: 3px;
 text-align: center;
-background-color: rgba(250, 233, 186, 0.637);
+background: transparent;
+background-color: rgba(250, 233, 186, 0.2);
 padding: 0.25em 1em;
 text-decoration: none;
 a {
@@ -28,7 +29,7 @@ a {
     color: black;
 }`
 const ReturnButton = Button.extend`
-background-color: tan;
+
 `
 
 class User extends Component {

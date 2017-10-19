@@ -8,22 +8,21 @@ font-family: "Nunito", sans-serif;
 `
 
 const PostButton = styled.button`
-font-family: "Bree Serif", sans-serif;
+font-family: "nunito", sans-serif;
 cursor: pointer;
 font-size: 15px;
 font-weight: 9px;
 color: black;
 border-radius: 5%;
 text-align: center;
-background-color: rgba(250, 233, 186, 0.637);
+background-color: rgba(250, 233, 186, 0.2);
 //margin: 20px auto;
-padding: 5px;
+padding: 6px;
 text-decoration: none;
 a {
     text-decoration: none;
     color: black;
-}
-`
+}`
 
 class ReviewForm extends Component {
     state = {

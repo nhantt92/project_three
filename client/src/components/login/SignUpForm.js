@@ -16,7 +16,7 @@ font-weight: 9px;
 color: black;
 border-radius: 3px;
 text-align: center;
-background-color: rgba(250, 233, 186, 0.637);
+background-color: rgba(250, 233, 186, 0.2);
 padding: 0.25em 1em;
 text-decoration: none;
 a {
