@@ -22,7 +22,7 @@ const PieContainer = styled.div`
 
 display: inline-flex;
 flex-direction: row;
-flex-wrap: wrap
+flex-wrap: wrap;
 justify-content: space-around;
 align-items: space-between;
 `
