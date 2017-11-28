@@ -30,7 +30,7 @@ class Custom extends Component {
         return (
             <CustomContainer>
                 <Image>
-                    <img src="https://i.imgur.com/4uTo81R.jpg" />
+                    <img src="https://i.imgur.com/4uTo81R.jpg" alt="black and white snapshot of a girl who has been hit in the face with a pie" />
                 </Image>
                 <Whoops>
                     <h3>Whoops! </h3>

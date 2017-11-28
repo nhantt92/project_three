@@ -49,7 +49,7 @@ class About extends Component {
 
                 </PieSlice> */}
 
-              <Sliced><img src="https://i.imgur.com/Tey9eTH.jpg" /></Sliced>
+              <Sliced><img src="https://i.imgur.com/Tey9eTH.jpg" alt="about us logo"/></Sliced>
                 
                
                 
