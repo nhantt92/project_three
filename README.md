@@ -7,7 +7,7 @@ Make a site that almost operates like a store. We're selling pies here, so we ha
 One of my favorite little attributes to the site is on the individual pie page -- it had a toggle that when clicked will reveal a review form. After completing a title and description, the review will pop up on the screen right under the pie. Once the user hits hide, then the form will hide again.   
 
 
-[Deployed on Heroku](https://secret-forest-34964.herokuapp.com/ "pie shop")
+[Deployed on Heroku](https://pieshop.herokuapp.com/ "pie shop")
 
 [User Stories](https://trello.com/b/QEZccMgv/project-3 "Trello")
 
