@@ -43,7 +43,6 @@ class EditForm extends Component {
 
     componentWillMount () {
         this.setState({updatedUser: this.props.user})
-    
     }
 
     // componentDidUpdate () {

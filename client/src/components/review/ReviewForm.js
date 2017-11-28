@@ -63,10 +63,10 @@ class ReviewForm extends Component {
 render() {
     
     
-    if (this.state.redirectorToPiePage) {
-        const { pieId } = this.props.pieId
-        return <Redirect to = {`/api/shops/pies/${pieId}`} />
-    }
+    // if (this.state.redirectorToPiePage) {
+    //     const { pieId } = this.props.pieId
+    //     return <Redirect to = {`/api/shops/pies/${pieId}`} />
+    // }
 return (
     <div>
     <ReviewFormContainer>

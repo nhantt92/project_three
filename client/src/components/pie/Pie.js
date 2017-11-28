@@ -186,7 +186,12 @@ class Pie extends Component {
                 
 
                 <br />
-                {this.state.showReviewForm ? <ReviewForm toggleReviewForm={this.toggleReviewForm} showReviewForm={this.state.showReviewForm} reloadPie={this.getOnePie} pieId={this.state.pie._id} /> : null}
+                {this.state.showReviewForm ? 
+                <ReviewForm 
+                toggleReviewForm={this.toggleReviewForm} 
+                showReviewForm={this.state.showReviewForm} 
+                reloadPie={this.getOnePie} 
+                pieId={this.state.pie._id} /> : null}
 
             </Container>
         );

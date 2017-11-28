@@ -53,16 +53,6 @@ async componentWillMount () {
     // console.log(res.data)
 }
 
-/// I will want to do this to create a custom pie
- // Create a Post for Idea
-  // Create onClick that creates an empty Post
-//   createNewPie = async () => {
-//     const { userId } = this.props.match.params
-//     const res = await axios.post(`/api/users/${userId}/pies`)
-//     // console.log(res.data)
-//     this.setState({user: res.data})
-//   }
-
 deleteUser = async (id) => {
     // console.log(res.data)
     const userId  = this.props.match.params.id
@@ -82,7 +72,7 @@ handleChange = (event, id) => {
     this.setState({ user: clonedUser })
 }
 
-// custom method to have user's updated info sent back tot he database. 
+// custom method to have user's updated info sent back to the database. 
 showUser = async () => {
     const userId = this.props.match.params.id
     const response = await axios.get(`/api/users/${userId}`)
@@ -101,8 +91,8 @@ toggleEdit = () => {
         }
 
         if (!this.state.editUserDetails) {
+
             return (
-        
              <UserDetails>
               <h1>{this.state.user.firstName} {this.state.user.lastName}'s account</h1>
                 <h2>{this.state.user.email}</h2>
@@ -117,7 +107,9 @@ toggleEdit = () => {
         else {
             return (
                 <div>
-                    <EditForm showUser={this.showUser} toggleEdit={this.toggleEdit} handleChange={this.state.user} user={this.state.user} />
+                    <EditForm showUser={this.showUser} 
+                    toggleEdit={this.toggleEdit} 
+                    handleChange={this.state.user} user={this.state.user} />
                 </div>
             )
         } 
@@ -137,3 +129,14 @@ export default User;
     //    <Link key={pie._id} to={`/users/${this.state.user._id}/pies/${pie._id}`}>{pie.ame}</Link>
    // )
 // })
+
+
+/// I will want to do this to create a custom pie
+ // Create a Post for Idea
+  // Create onClick that creates an empty Post
+//   createNewPie = async () => {
+//     const { userId } = this.props.match.params
+//     const res = await axios.post(`/api/users/${userId}/pies`)
+//     // console.log(res.data)
+//     this.setState({user: res.data})
+//   }
