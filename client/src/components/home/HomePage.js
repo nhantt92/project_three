@@ -30,11 +30,12 @@ const ButtonDecor = styled.span`
 // `
 
  const BackgroundImage = styled.div`
+margin-top: -8px;
  text-align: center;
- padding-top: 1px;
+ /* padding-top: 1px; */
  img{
-     position: relative;
-     width: 1200px;
+     max-width: 100%;
+     /* height: auto; */
  }
 // height: 1500px;
 // width: 1500px;
