@@ -13,12 +13,14 @@ a {
   font-family: "Bree Serif", sans-serif;
   color: gray;
 }
-`
-
-const Pies = styled.div`
-a {color: orange;
+a:hover {color: #f1ac91;
 }
 `
+
+// const Pies = styled.div`
+// a:hover {color: #f1ac91;
+// }
+// `
 
 
 
@@ -35,9 +37,9 @@ const NavBar = () => {
           <Link to="/about">about</Link>  
         </div>
        
-         <Pies>
+        
            <Link to="/pies">pies</Link>
-        </Pies> 
+      
         
         <div>
           <Link to="/custom">custom</Link>  
