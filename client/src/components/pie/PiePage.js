@@ -71,8 +71,8 @@ class PiePage extends Component {
                 <Title>our pies</Title>
                  {this.state.shop.pies.map(pie => {
                     return (
-                 <PieContainer>    
-              <Link key={pie._id} to={`/pies/${pie._id}`}> 
+                 <PieContainer key={pie._id}>    
+              <Link  to={`/pies/${pie._id}`}> 
 
                         <PieImage>
                         <img src={pie.image} alt="pie"/> 
