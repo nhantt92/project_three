@@ -12,9 +12,11 @@ text-align: center;
 padding-top: 20px;
 margin-left: 50px;
 img{
-    
-    width: 600px;
+    max-width: 70%;
+    height: auto;
     border-radius: 5px;
+    
+
 }
 `
 const Whoops = styled.div`
