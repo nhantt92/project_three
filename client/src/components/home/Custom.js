@@ -12,7 +12,7 @@ text-align: center;
 padding-top: 20px;
 margin-left: 50px;
 img{
-    max-width: 70%;
+    max-width: 50%;
     height: auto;
     border-radius: 5px;
     
