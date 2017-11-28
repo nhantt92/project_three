@@ -21,6 +21,10 @@ const Slice = styled.div`
 //  width: 1000px;
 
 background-image: url(${slice})
+ing{
+max-width: 100%;
+     height: auto;
+}
 `
 
 const Sliced = styled.div`
@@ -28,8 +32,10 @@ text-align: center;
 padding-top: 20px;
 padding-bottom: 20px;
 img{
-    position: relative;
-    width: 600px;
+    /* position: relative;
+    width: 600px; */
+    max-width: 50%;
+    height: auto;
 }
 `
 
