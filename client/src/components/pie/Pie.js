@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import ReviewPage from '../review/ReviewPage'
-// import ReviewList from '../review/ReviewList'
+
 import ReviewForm from '../review/ReviewForm'
 
 const Container = styled.div`
@@ -152,7 +151,7 @@ class Pie extends Component {
                     {this.state.pie.flavor} pie
         </Title>
                 <ImageStyle>
-                    <img src={this.state.pie.image} />
+                    <img src={this.state.pie.image} alt="this.state.pie.flavor"/>
                 </ImageStyle>
                 <PieDescriptionStyle>
                     {this.state.pie.description}

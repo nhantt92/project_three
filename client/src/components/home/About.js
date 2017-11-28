@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import slice from './pie_slice.jpg'
-import sliced from './sliced.jpg'
+// import slice from './pie_slice.jpg'
 
 // const PieSlice = styled.div`
 // display: block;
@@ -16,16 +15,16 @@ import sliced from './sliced.jpg'
 // }
 // `
 
-const Slice = styled.div`
-//  height: 3000px;
-//  width: 1000px;
+// const Slice = styled.div`
+// //  height: 3000px;
+// //  width: 1000px;
 
-background-image: url(${slice})
-ing{
-max-width: 100%;
-     height: auto;
-}
-`
+// background-image: url(${slice})
+// ing{
+// max-width: 100%;
+//      height: auto;
+// }
+// `
 
 const Sliced = styled.div`
 text-align: center;

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import image from "./backgroundimage.jpg"
 import pieImage from "./background_image_pie.jpg"
 
 const ButtonDecor = styled.span`
@@ -59,7 +58,7 @@ class HomePage extends Component {
                 pie shop
                 </Title>     */}
                  {/* <img src="https://i.imgur.com/LF9TG0f.jpg" /> */}
-                 <Link to="/pies">   <img src="https://i.imgur.com/TliDwQu.jpg" /> </Link>    
+                 <Link to="/pies">   <img src="https://i.imgur.com/TliDwQu.jpg" alt="collage with pies" /> </Link>    
             </BackgroundImage>
 
          <Buttons>

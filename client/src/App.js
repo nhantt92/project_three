@@ -12,7 +12,7 @@ import PiePage from './components/pie/PiePage'
 import About from './components/home/About'
 import EditForm from './components/login/EditForm'
 import Pie from './components/pie/Pie'
-import Footer from './components/Footer'
+// import Footer from './components/Footer'
 import Custom from './components/home/Custom'
 
 

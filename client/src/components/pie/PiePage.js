@@ -75,7 +75,7 @@ class PiePage extends Component {
               <Link key={pie._id} to={`/pies/${pie._id}`}> 
 
                         <PieImage>
-                        <img src={pie.image}/> 
+                        <img src={pie.image} alt="pie"/> 
                         </PieImage>
               </Link> 
 
