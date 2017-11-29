@@ -6,12 +6,20 @@ import { Link } from 'react-router-dom'
 const PiePageContainer = styled.div`
 background-color: white;
 border-radius: 5px;
-max-width: 1000px;
+width: 1000px;
 margin: 20px auto;
 border: 1px solid rgba(87, 87, 87, .2);
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-evenly;
+align-items: space-between;
+@media only screen and (min-width: 1400px) {
+    width: 1200px;
+}
 `
 
-const Title = styled.h1`
+const Title = styled.div`
 text-align: center;
 font-family: 'Lobster Two', cursive;
 text-decoration: underline;
@@ -19,19 +27,17 @@ font-size: 50px
 `
 
 const PieContainer = styled.div`
+    padding: 2px;
 
-display: inline-flex;
-flex-direction: row;
-flex-wrap: wrap;
-justify-content: space-around;
-align-items: space-between;
+
 `
 const PieImage = styled.image`
+
 // margin 0 auto;
 margin-left: 30px;
 margin-right: 20px;
 img{
-    max-width: 200px; 
+    max-width: 250px; 
     border-radius: 5px;
   }
   `
@@ -67,8 +73,11 @@ class PiePage extends Component {
 
     render() {
         return (
+            <div>
+            <Title>our pies</Title>
             <PiePageContainer>
-                <Title>our pies</Title>
+               
+            
                  {this.state.shop.pies.map(pie => {
                     return (
                  <PieContainer key={pie._id}>    
@@ -79,7 +88,7 @@ class PiePage extends Component {
                         </PieImage>
               </Link> 
 
-             <SpacerDiv></SpacerDiv>
+         
 
               </PieContainer> 
                         
@@ -87,6 +96,7 @@ class PiePage extends Component {
                 })} 
                 
             </PiePageContainer>
+            </div>
         );
     }
 }
